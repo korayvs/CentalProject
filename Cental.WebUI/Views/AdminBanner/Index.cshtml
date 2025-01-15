@@ -5,6 +5,7 @@
 }
 
 <h3>Öne Çıkan Alan</h3>
+
 @{
     int count = 0;
 }
@@ -28,8 +29,8 @@
             <td><img src="@item.ImageUrl" style="width:75px;height:75px" /> </td>
             <td>@item.Title</td>
             <td>@item.Description</td>
-            <td><a asp-action="DeleteAbout" asp-route-id="@item.BannerId" class="btn btn-danger">Sil</a> </td>
-            <td><a asp-action="UpdateAbout" asp-route-id="@item.BannerId" class="btn btn-info">Güncelle</a> </td>
+            <td><a asp-action="DeleteBanner" asp-route-id="@item.BannerId" class="btn btn-danger">Sil</a> </td>
+            <td><a asp-action="UpdateBanner" asp-route-id="@item.BannerId" class="btn btn-info">Güncelle</a> </td>
         </tr>
     }
 
