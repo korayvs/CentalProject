@@ -9,6 +9,7 @@ using Cental.DataAccessLayer.Repositories;
 using Cental.EntityLayer.Entities;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +19,12 @@ var builder = WebApplication.CreateBuilder(args);
 //About service gördüðün zaman aboutmanager sýnýfýndan bir nesne örneði al ve iþlemi onunla yap
 builder.Services.AddDbContext<CentalContext>();
 
-builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<CentalContext>();
+builder.Services.AddIdentity<AppUser, AppRole>(/*cfg => cfg.Password.RequiredLength = 8*/cfg =>
+{
+    cfg.User.RequireUniqueEmail = true;
+})
+                .AddEntityFrameworkStores<CentalContext>()
+                .AddErrorDescriber<CustomErrorDescriber>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
@@ -31,7 +37,16 @@ builder.Services.AddFluentValidationAutoValidation()
                 .AddFluentValidationClientsideAdapters()
                 .AddValidatorsFromAssemblyContaining<BrandValidator>();
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(option =>
+{
+    option.Filters.Add(new AuthorizeFilter());
+});
+
+builder.Services.ConfigureApplicationCookie(cfg =>
+{
+    cfg.LoginPath = "/Login/Index";
+    cfg.LogoutPath = "/Login/Logout";
+});
 
 var app = builder.Build();
 
@@ -48,7 +63,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
+app.UseAuthentication(); //sistemde kayýtlý mý deðil mi?
+app.UseAuthorization();  //yetkisi var mý?
 
 app.MapControllerRoute(
     name: "default",
