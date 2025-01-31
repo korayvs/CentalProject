@@ -3,11 +3,13 @@ using Cental.DtoLayer.UserDtos;
 using Cental.EntityLayer.Entities;
 using FluentValidation;
 using Mapster;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cental.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminProfileController(UserManager<AppUser> _userManager, IImageService _imageService) : Controller
     {
         public async Task<IActionResult> Index()
