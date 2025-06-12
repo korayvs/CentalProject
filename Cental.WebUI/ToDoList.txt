@@ -1,0 +1,16 @@
+﻿Booking Entity eklenecek ve araba kiralama işlemi ana sayfadan gerçekleşecek
+-booking status => Onay bekliyor, İptal edildi, Onaylandı
+
+User Paneli eklenecek ve içinde araç kiralama durumları görecek
+
+Loginde giriş yaptığımızda kullanıcının rolüne göre panele yönlendirme
+
+SweetAlert
+
+Pagging(Sayfalama)
+
+Filtreleyerek araçları getirme
+
+Ana sayfada Manager rolüne sahip kullanıcıların sosyal medyaları
+
+UI Layout'a bağlı yeni sayfa (İletişim sayfası)

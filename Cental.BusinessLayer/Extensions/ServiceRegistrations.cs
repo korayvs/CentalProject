@@ -12,9 +12,11 @@ using System.Threading.Tasks;
 namespace Cental.BusinessLayer.Extensions
 {
     public static class ServiceRegistrations
-    {
+    {        
         public static void AddServiceRegistrations(this IServiceCollection services)
         {
+            //IOC Container
+
             services.AddScoped<IAboutDal, EfAboutDal>();
             services.AddScoped<IAboutService, AboutManager>();
             
@@ -28,6 +30,9 @@ namespace Cental.BusinessLayer.Extensions
             services.AddScoped<ICarService, CarManager>();
 
             services.AddScoped<IImageService, ImageService>();
+
+            services.AddScoped<IUserSocialDal, EfUserSocialDal>();
+            services.AddScoped<IUserSocialService, UserSocialManager>();
         }
     }
 }
