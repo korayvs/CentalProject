@@ -5,10 +5,6 @@ User Paneli eklenecek ve içinde araç kiralama durumları görecek
 
 Loginde giriş yaptığımızda kullanıcının rolüne göre panele yönlendirme
 
-SweetAlert
-
-Pagging(Sayfalama)
-
 Filtreleyerek araçları getirme
 
 Ana sayfada Manager rolüne sahip kullanıcıların sosyal medyaları
