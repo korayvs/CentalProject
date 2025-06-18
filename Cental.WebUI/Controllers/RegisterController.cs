@@ -35,6 +35,8 @@ namespace Cental.WebUI.Controllers
                 return View(model);
             }
 
+            await _userManager.AddToRoleAsync(user, "User");
+
             return RedirectToAction("Index", "Login");
         }
     }

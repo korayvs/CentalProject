@@ -1,12 +1,34 @@
-﻿Booking Entity eklenecek ve araba kiralama işlemi ana sayfadan gerçekleşecek
--booking status => Onay bekliyor, İptal edildi, Onaylandı
+﻿Booking Entity eklenecek ve araba kiralama işlemi ana sayfadan gerçekleşecek (SweetAlert ile kiralama talebiniz alındı)
+-booking (string)status => Onay bekliyor, İptal edildi, Onaylandı 
+-Admin ve Manager panelinden kontrol edilecek
 
-User Paneli eklenecek ve içinde araç kiralama durumları görecek
+Ana sayfadaki Default/Index içindeki tüm bölümler ViewComponent yapısına çevrilecek ve dinamik hala getirilecek
+-Ana sayfada araçlar en son eklenen 6 araç şeklinde slider'da gelsin
 
-Loginde giriş yaptığımızda kullanıcının rolüne göre panele yönlendirme
+Counter içerisine İstatistik bilgileri getirilecek
 
-Filtreleyerek araçları getirme
+Blog kısmı olmayacak
 
-Ana sayfada Manager rolüne sahip kullanıcıların sosyal medyaları
+Footer alanı dinamik hale getirilecek
+-Footer içerisinden Subscribe kısmı olacak	(ViewComponent içerisinde form şeklinde post işlemini asp-action / asp-controller ile yapacak) 
 
-UI Layout'a bağlı yeni sayfa (İletişim sayfası)
+Topbar kısmı dinamik hale getirilecek
+
+Admin tarafında tüm tabloların listelenmesi ve CRUD işlemleri yapılacak
+-Admin tarafında bir Dashboard alanı olacak ve istatistik bilgileri getirilecek (Controller'dan Service (I/Dasboard Service - Abstract, Concrete) ile yapma)[flat-able-admin/dist/index]
+(Toplam kullanıcı sayısı(User rolü olan), toplam gelen mesaj sayısı, toplam araç sayısı, kiralanan araç sayısı, onay bekleyen kiralama)
+--İstatistik altında(Projects) son eklenen araçlar (6 adet) ve son eklenen kiralama talepleri (5 adet) listelenecek
+--Ortalama puan
+-Admin gelen mesajları okusun
+
+Manager Profil güncelleme alanı yapılacak
+-Manager tarafında Booking tablosu, MySocial, Profile listelenecek ve onaylanacak
+
+User Area'sı eklenecek
+-User Profil güncelleme alanı yapılacak
+-User Panelinde araç kiralama durumları görünecek, kiralama taleplerini liste olarak görsün ve yanında durumu yazsın
+
+Araçlara yorum ve puan verme kısmı olacak
+
+UI Layout Navbar içerisinden tüm sayfalara erişim sağlanacak
+-Giriş Yap ve Kayıt Ol kısmı Navbar içerisinde olacak
