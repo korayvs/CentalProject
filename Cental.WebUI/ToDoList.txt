@@ -7,7 +7,7 @@ Ana sayfadaki Default/Index içindeki tüm bölümler ViewComponent yapısına �
 
 Counter içerisine İstatistik bilgileri getirilecek
 
-Blog kısmı olmayacak
+***** Blog kısmı olmayacak *****
 
 Footer alanı dinamik hale getirilecek
 -Footer içerisinden Subscribe kısmı olacak	(ViewComponent içerisinde form şeklinde post işlemini asp-action / asp-controller ile yapacak) 

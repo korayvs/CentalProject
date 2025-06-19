@@ -4,6 +4,7 @@ using Cental.DataAccessLayer.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cental.DataAccessLayer.Migrations
 {
     [DbContext(typeof(CentalContext))]
-    partial class CentalContextModelSnapshot : ModelSnapshot
+    [Migration("20250619163817_mig_booking_added")]
+    partial class mig_booking_added
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -258,14 +261,9 @@ namespace Cental.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("BookingId");
 
                     b.HasIndex("CarId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Bookings");
                 });
@@ -600,13 +598,7 @@ namespace Cental.DataAccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Cental.EntityLayer.Entities.AppUser", "User")
-                        .WithMany("Bookings")
-                        .HasForeignKey("UserId");
-
                     b.Navigation("Car");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Cental.EntityLayer.Entities.Car", b =>
@@ -695,8 +687,6 @@ namespace Cental.DataAccessLayer.Migrations
 
             modelBuilder.Entity("Cental.EntityLayer.Entities.AppUser", b =>
                 {
-                    b.Navigation("Bookings");
-
                     b.Navigation("UserSocials");
                 });
 
