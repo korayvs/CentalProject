@@ -1,5 +1,72 @@
-﻿
+﻿@model List<ResultBookingDto>
 @{
-    ViewData["Title"] = "Kiralama Sayfası";
+    ViewData["Title"] = "Rezervasyonlar";
     Layout = "~/Areas/Manager/Views/ManagerLayout/Index.cshtml";
+    int count = 0;
 }
+
+<table class="table table-bordered">
+    <tr>
+        <th style="width: 1%">#</th>
+        <th>Seçilen Araç</th>
+        <th>Alış Yeri</th>
+        <th>İade Yeri</th>
+        <th>Alış Tarihi</th>
+        <th>İade Tarihi</th>
+        <th style="width: 5%">Durum</th>
+        <th style="width: 5%">Durumu Değiştir</th>
+        <th style="width: 8%">İşlemler</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.Car.Brand.BrandName @item.Car.ModelName @item.Car.Year</td>
+            <td>@item.PickUpLocation</td>
+            <td>@item.DropOffLocation</td>
+            <td>@item.PickUpDate.ToShortDateString()</td>
+            <td>@item.DropOffDate.ToShortDateString()</td>
+            <td>
+                @if (item.IsApproved == true)
+                {
+                    <span class="badge badge-success">Onaylandı</span>
+                }
+                else if (item.IsApproved == false)
+                {
+                    <span class="badge badge-danger">Reddedildi</span>
+                }
+                else
+                {
+                    <span class="badge badge-warning">Beklemede</span>
+                }
+            </td>
+            <td>
+                <a class="btn btn-outline-success btn-sm" asp-action="ApproveRezervation" asp-controller="Booking" asp-route-id="@item.BookingId">Onayla</a>
+                <a class="btn btn-outline-danger btn-sm" asp-action="DeclineRezervation" asp-controller="Booking" asp-route-id="@item.BookingId">Reddet</a>
+                <a class="btn btn-outline-warning btn-sm" asp-action="WaitingRezervation" asp-controller="Booking" asp-route-id="@item.BookingId">Beklemeye Al</a>
+            </td>
+
+            @* <td>
+                @{
+                    if (item.IsApproved == true)
+                    {
+                        <a class="btn btn-danger" asp-action="DeclineRezervation" asp-controller="Booking" asp-route-id="@item.BookingId">Reddet</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-success" asp-action="ApproveRezervation" asp-controller="Booking" asp-route-id="@item.BookingId">Onayla</a>
+                    }
+                }
+            </td> *@
+
+            <td>
+                <a asp-action="DeleteRezervation" asp-route-id="@item.BookingId" class="btn btn-danger btn-sm">Sil</a>
+                <a asp-action="UpdateRezervation" asp-route-id="@item.BookingId" class="btn btn-info btn-sm">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a asp-action="CreateRezervation" asp-controller="Booking" class="btn btn-primary">Yeni Rezervasyon Ekle</a>

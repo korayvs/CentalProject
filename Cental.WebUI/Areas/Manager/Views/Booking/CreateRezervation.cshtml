@@ -1,0 +1,33 @@
+﻿@model CreateBookingDto
+@{
+    ViewData["Title"] = "Yeni Rezervasyon Oluştur";
+    Layout = "~/Areas/Manager/Views/ManagerLayout/Index.cshtml";
+}
+
+<form method="post">
+
+    <label>Araç Seç</label>
+    <select asp-for="CarId" class="form-control">
+        <option selected>Aracınızı seçin</option>
+        @foreach (var car in ViewBag.carList)
+        {
+            <option value="@car.Value">@car.Text</option>
+        }
+    </select>
+    <br />
+    <label>Alış Yeri</label>
+    <input type="text" asp-for="PickUpLocation" class="form-control" placeholder="Şehir, bölge veya havaalanı girin" />
+    <br />
+    <label>İade Yeri</label>
+    <input type="text" asp-for="DropOffLocation" class="form-control" placeholder="Şehir, bölge veya havaalanı girin" />
+    <br />
+    <label>Alış Tarihi</label>
+    <input type="date" asp-for="PickUpDate" class="form-control" />
+    <br />
+    <label>İade Tarihi</label>
+    <input type="date" asp-for="DropOffDate" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-primary"> Kaydet </button>
+
+</form>
