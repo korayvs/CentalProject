@@ -1,5 +1,6 @@
-﻿@{
-	Layout = null;
+﻿
+@{
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -7,7 +8,7 @@
 
 <head>
 
-	<title>Cental | Manager Paneli</title>
+	<title>Cental | User Paneli</title>
 	<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 11]>
@@ -40,10 +41,10 @@
 	</div>
 	<!-- [ Pre-loader ] End -->
 	<!-- [ navigation menu ] start -->
-	@await Component.InvokeAsync("_ManagerLayoutNavMenuComponent")
+	@await Component.InvokeAsync("_UserLayoutNavMenuComponent")
 	<!-- [ navigation menu ] end -->
 	<!-- [ Header ] start -->
-	@await Component.InvokeAsync("_ManagerLayoutHeaderComponent")
+	@await Component.InvokeAsync("_UserLayoutHeaderComponent")
 	<!-- [ Header ] end -->
 	<!-- [ Main Content ] start -->
 	<div class="pcoded-main-container">

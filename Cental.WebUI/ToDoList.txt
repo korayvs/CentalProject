@@ -21,12 +21,12 @@ Admin tarafında tüm tabloların listelenmesi ve CRUD işlemleri yapılacak
 --Ortalama puan
 -Admin gelen mesajları okusun
 
-Manager Profil güncelleme alanı yapılacak
--Manager tarafında Booking tablosu, MySocial, Profile listelenecek ve onaylanacak
+***** Manager Profil güncelleme alanı yapılacak
+-Manager tarafında Booking tablosu, MySocial, Profile listelenecek ve onaylanacak *****
 
-User Area'sı eklenecek
+***** User Area'sı eklenecek
 -User Profil güncelleme alanı yapılacak
--User Panelinde araç kiralama durumları görünecek, kiralama taleplerini liste olarak görsün ve yanında durumu yazsın
+-User Panelinde araç kiralama durumları görünecek, kiralama taleplerini liste olarak görsün ve yanında durumu yazsın *****
 
 Araçlara yorum ve puan verme kısmı olacak
 

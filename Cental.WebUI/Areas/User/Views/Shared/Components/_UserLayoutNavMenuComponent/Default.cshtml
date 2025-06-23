@@ -1,0 +1,45 @@
+﻿@model AppUser
+@*
+    _UserLayoutNavMenuComponent
+*@
+
+<nav class="pcoded-navbar  ">
+	<div class="navbar-wrapper  ">
+		<div class="navbar-content scroll-div ">
+
+			<div class="">
+				<div class="main-menu-header">
+					<img src="@Model.ImageUrl" alt="User-Profile-Image" style="border-radius:50%;height:50px;width:50px">
+					<div class="user-details">
+						<span>@Model.FirstName @Model.LastName</span>
+						<div id="more-details">User</div>
+					</div>
+				</div>
+			</div>
+
+			<ul class="nav pcoded-inner-navbar ">
+				<li class="nav-item pcoded-menu-caption">
+					<label>Menü</label>
+				</li>
+				<li class="nav-item">
+					<a href="/User/Profile/Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-user m-r-5"></i></span><span class="pcoded-mtext">Profil Bilgilerim</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="/User/Booking/Index" class="nav-link "><span class="pcoded-micon"><i class="fa fa-car"></i></span><span class="pcoded-mtext">Rezervasyonlar</span></a>
+				</li>
+
+				<li class="nav-item">
+					<a href="#" class="nav-link "><span class="pcoded-micon"><i class="fa fa-car"></i></span><span class="pcoded-mtext">Değerlendirme</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="/Default/Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-settings m-r-5"></i></span><span class="pcoded-mtext">Siteye Git</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="/Login/Logout" class="nav-link "><span class="pcoded-micon"><i class="feather icon-log-out m-r-5"></i></span><span class="pcoded-mtext">Çıkış Yap</span></a>
+				</li>
+
+			</ul>
+
+		</div>
+	</div>
+</nav>

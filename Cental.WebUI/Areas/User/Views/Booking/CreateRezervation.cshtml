@@ -1,10 +1,12 @@
 ﻿@model CreateBookingDto
 @{
     ViewData["Title"] = "Yeni Rezervasyon Oluştur";
-    Layout = "~/Areas/Manager/Views/ManagerLayout/Index.cshtml";
+    Layout = "~/Areas/User/Views/UserLayout/Layout.cshtml";
 }
 
 <form method="post">
+
+    <input type="hidden" asp-for="UserId" value="@ViewBag.user" />
 
     <label>Araç Seç</label>
     <select asp-for="CarId" class="form-control">
@@ -22,10 +24,10 @@
     <input type="text" asp-for="DropOffLocation" class="form-control" placeholder="Şehir, bölge veya havaalanı girin" />
     <br />
     <label>Alış Tarihi</label>
-    <input type="date" asp-for="PickUpDate" min="2025.01.01" value="2025.01.01" class="form-control" />
+    <input type="date" asp-for="PickUpDate" class="form-control" />
     <br />
     <label>İade Tarihi</label>
-    <input type="date" asp-for="DropOffDate" min="2025.01.01" value="2025.01.01" class="form-control" />
+    <input type="date" asp-for="DropOffDate" class="form-control" />
     <br />
 
     <button class="btn btn-outline-primary"> Kaydet </button>

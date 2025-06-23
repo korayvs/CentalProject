@@ -1,0 +1,36 @@
+﻿@model ProfileEditDto
+@{
+    ViewData["Title"] = "Profil Bilgileri Güncelle";
+    Layout = "~/Areas/Manager/Views/ManagerLayout/Index.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+
+    <div class="text-center">
+        <img src="@Model.ImageUrl" style="width:100px;height:100px" alt="Profile Resmi" />
+        <input type="file" asp-for="ImageFile" accept="image/png, image/gif, image/jpeg" />
+    </div>
+
+    <input type="hidden" asp-for="ImageUrl" />
+    <label>Ad</label>
+    <input type="text" asp-for="FirstName" class="form-control" required />
+    <br />
+    <label>Soyad</label>
+    <input type="text" asp-for="LastName" class="form-control" required />
+    <br />
+    <label>Email</label>
+    <input type="email" asp-for="Email" class="form-control" required />
+    <br />
+    <label>Telefon Numarası</label>
+    <input type="text" asp-for="PhoneNumber" class="form-control" required />
+    <br />
+    <label>Bilgileri Güncellemek İçin Şifrenizi Girin</label>
+    <input type="password" asp-for="CurrentPassword" class="form-control" required />
+    <br />
+
+    <p class="text-danger">
+        @Html.ValidationSummary()
+    </p>
+
+    <button class="btn btn-outline-dark">Bilgileri Güncelle</button>
+</form>
