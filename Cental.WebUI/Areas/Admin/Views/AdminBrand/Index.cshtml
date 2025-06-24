@@ -1,0 +1,56 @@
+﻿@model PagedList<ResultBrandDto>
+@{
+    ViewData["Title"] = "Markalar";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
+    int count = Model.PageSize * Model.PageNumber - (Model.PageSize);
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th style="width:1%">#</th>
+        <th>Marka</th>
+        <th style="width:8%">İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.BrandName</td>
+            <td>
+                <button onclick="delBrand(@item.BrandId)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                <a asp-action="UpdateBrand" asp-route-id="@item.BrandId" class="btn btn-info btn-sm"><i class="fa fa-pen"></i></a>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div class="text-center">
+    <pager asp-action="Index" asp-controller="AdminBrand" asp-area="Admin" list="@Model"></pager>
+</div>
+
+<a asp-action="CreateBrand" asp-controller="AdminBrand" asp-area="Admin" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Marka Ekle </a>
+
+<script>
+
+    function delBrand(id){
+
+            Swal.fire({
+      title: "Silmek istediğinize emin misiniz?",
+      text: "Bu işlemi geri alamazsınız!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Evet, Sil!",
+      cancelButtonText: "İptal Et"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "/Admin/AdminBrand/DeleteBrand/" + id
+      }
+    });
+
+    }
+
+</script>

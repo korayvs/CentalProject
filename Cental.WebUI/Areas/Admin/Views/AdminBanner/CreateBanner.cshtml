@@ -1,0 +1,21 @@
+﻿@model CreateBannerDto
+@{
+    ViewData["Title"] = "Yeni Öne Çıkan Alan";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+
+    <label>Resim Seçin</label>
+    <input type="file" asp-for="ImageFile" accept="image/png, image/gif, image/jpeg" class="form-control" />
+    <br />
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+
+</form>

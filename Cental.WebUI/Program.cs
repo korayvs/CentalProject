@@ -47,6 +47,8 @@ builder.Services.ConfigureApplicationCookie(cfg =>
     cfg.LoginPath = "/Login/Index";
     cfg.LogoutPath = "/Login/Logout";
     cfg.AccessDeniedPath = "/ErrorPage/AccessDenied";
+    cfg.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+    cfg.SlidingExpiration = true;
 });
 
 var app = builder.Build();

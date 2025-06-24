@@ -1,0 +1,23 @@
+﻿@model UpdateBannerDto
+@{
+    ViewData["Title"] = "Öne Çıkan Alan Güncelle";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+
+    <input type="hidden" asp-for="@Model.BannerId" />
+    <label>Resim</label>
+    <img src="@Model.ImageUrl" style="width:75px;height:75px" alt="BannerResim" />
+    <input type="file" asp-for="ImageFile" accept="image/png, image/gif, image/jpeg" class="form-control" />
+    <br />
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-info">Güncelle</button>
+
+</form>

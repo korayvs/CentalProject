@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Cental.WebUI.ViewComponents.AdminLayout
+namespace Cental.WebUI.Areas.Admin.ViewComponents
 {
     public class _AdminLayoutHeadComponent : ViewComponent
     {

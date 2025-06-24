@@ -20,8 +20,8 @@
             <td>
                 <a href="@item.SocialMediaUrl" target="_blank"><i class="@item.Icon"></i>@item.Title</a>
             </td>
-            <td><button onclick="deleteSocial(@item.UserSocialId)" class="btn btn-danger">Sil</button> </td>
-            <td><a asp-action="UpdateSocial" asp-route-id="@item.UserSocialId" class="btn btn-info">Güncelle</a> </td>
+            <td><button onclick="deleteSocial(@item.UserSocialId)" class="btn btn-danger">Sil</button></td>
+            <td><a asp-action="UpdateSocial" asp-route-id="@item.UserSocialId" class="btn btn-info">Güncelle</a></td>
         </tr>
     }
 </table>

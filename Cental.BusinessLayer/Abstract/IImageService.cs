@@ -12,7 +12,7 @@ namespace Cental.BusinessLayer.Abstract
         /// <summary>
         /// Save an image file from the computer to the project's wwwroot/images folder
         /// </summary>
-        /// <param name="file"></param>
+        /// <paramname="file"></param>
         /// <returns> Returns a string value for the model's ImageUrl property </returns>
         Task<string> SaveImageAsync(IFormFile file);
     }

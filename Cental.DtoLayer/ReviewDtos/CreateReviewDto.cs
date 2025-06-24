@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Cental.EntityLayer.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cental.EntityLayer.Entities
+namespace Cental.DtoLayer.ReviewDtos
 {
-    public class Review : BaseEntity
+    public class CreateReviewDto
     {
-        public int ReviewId { get; set; }
         public int Rating { get; set; }
         public int CarId { get; set; }
         public virtual Car Car { get; set; }
