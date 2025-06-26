@@ -1,12 +1,14 @@
 ﻿using Cental.DtoLayer.UserDtos;
 using Cental.EntityLayer.Entities;
-using Mapster;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Cental.WebUI.Controllers
+namespace Cental.WebUI.Areas.Admin.Controllers
 {
+    [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class RoleAssignController(UserManager<AppUser> _userManager, RoleManager<AppRole> _roleManager) : Controller
     {
         public async Task<IActionResult> Index()
@@ -28,7 +30,6 @@ namespace Cental.WebUI.Controllers
 
                 userdto.Add(dto);
             }
-
             return View(userdto);
         }
 
@@ -55,7 +56,6 @@ namespace Cental.WebUI.Controllers
 
                 assignRoleDtoList.Add(model);
             }
-
             return View(assignRoleDtoList);
         }
 
@@ -77,7 +77,6 @@ namespace Cental.WebUI.Controllers
                     await _userManager.RemoveFromRoleAsync(user, item.RoleName);
                 }
             }
-
             return RedirectToAction("Index");
         }
     }

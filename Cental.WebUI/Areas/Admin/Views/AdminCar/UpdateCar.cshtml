@@ -1,11 +1,12 @@
-﻿@model CreateCarDto
+﻿@model UpdateCarDto
 @{
-    ViewData["Title"] = "Yeni Araba Ekle";
-    Layout = "~/Views/AdminLayout/Layout.cshtml";
+    ViewData["Title"] = "Araba Bilgileri Güncelle";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
 }
 
 <form method="post">
 
+    <input type="hidden" asp-for="CarId" />
     <div class="row">
         <div class="col-lg-6">
             <label>Araba Modeli</label>
@@ -50,8 +51,8 @@
             </select>
             <br />
         </div>
-    </div>           
+    </div>
 
-    <button class="btn btn-outline-dark">Kaydet</button>
+    <button class="btn btn-outline-info">Güncelle</button>
 
 </form>

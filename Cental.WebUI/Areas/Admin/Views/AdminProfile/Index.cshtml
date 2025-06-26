@@ -1,9 +1,8 @@
 ﻿@model ProfileEditDto
 @{
     ViewData["Title"] = "Profil Bilgileri Güncelleme";
-    Layout = "~/Views/AdminLayout/Layout.cshtml";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
 }
-
 
 <form method="post" enctype="multipart/form-data">
 
@@ -26,7 +25,7 @@
     <input type="text" asp-for="PhoneNumber" class="form-control" required />
     <br />
     <label>Bilgileri Güncellemek İçin Şifrenizi Girin</label>
-    <input type="password" asp-for="CurrentPassword" class="form-control" required/>
+    <input type="password" asp-for="CurrentPassword" class="form-control" required />
     <br />
 
     <p class="text-danger">

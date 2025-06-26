@@ -7,8 +7,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Cental.WebUI.Controllers
+namespace Cental.WebUI.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     [Authorize(Roles = "Admin")]
     public class AdminProfileController(UserManager<AppUser> _userManager, IImageService _imageService) : Controller
     {
@@ -29,7 +30,7 @@ namespace Cental.WebUI.Controllers
             var succeed = await _userManager.CheckPasswordAsync(user, model.CurrentPassword);
 
             if (succeed)
-            {   
+            {
                 if (model.ImageFile != null)
                 {
                     try
@@ -40,7 +41,7 @@ namespace Cental.WebUI.Controllers
                     {
                         ModelState.AddModelError(string.Empty, ex.Message);
                         return View(model);
-                    }                                        
+                    }
                 }
 
                 user.FirstName = model.FirstName;

@@ -28,7 +28,7 @@ namespace Cental.BusinessLayer.Concrete
 
         public Car TGetById(int id)
         {
-            return TGetById(id);
+            return _carDal.GetById(id);
         }
 
         public List<Car> TGetCarsWithBrands()

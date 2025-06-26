@@ -5,15 +5,15 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Cental.WebUI.Controllers
+namespace Cental.WebUI.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     [Authorize(Roles = "Admin")]
     public class RoleController(RoleManager<AppRole> _roleManager) : Controller
     {
         public IActionResult Index()
         {
             var roles = _roleManager.Roles.ToList();
-
             var dto = roles.Adapt<List<ResultRoleDto>>();
             return View(dto);
         }
@@ -27,7 +27,6 @@ namespace Cental.WebUI.Controllers
         public async Task<IActionResult> CreateRole(CreateRoleDto model)
         {
             var role = model.Adapt<AppRole>();
-
             var result = await _roleManager.CreateAsync(role);
 
             if (!result.Succeeded)

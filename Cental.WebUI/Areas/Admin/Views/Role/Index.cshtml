@@ -1,0 +1,56 @@
+﻿@model List<ResultRoleDto>
+@{
+    ViewData["Title"] = "Roller";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
+    int count = 0;
+}
+
+<div class="alert alert-info">
+    <h5>Sitenin işleyişi açısından Rol isimleri şu şekilde olmalıdır: <strong>Admin, Manager, User</strong></h5>
+</div>
+
+<table class="table table-bordered">
+    <tr>
+        <th style="width:1%">#</th>
+        <th>Rol</th>
+        <th style="width:3%">Sil</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.Name</td>
+            <td>
+                <button onclick="delRole(@item.Id)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                @* <a asp-action="UpdateRole" asp-area="Admin" asp-route-id="@item.Id" class="btn btn-info btn-sm"><i class="fa fa-pen"></i></a> *@
+            </td>
+        </tr>
+    }
+</table>
+
+<a asp-action="CreateRole" asp-controller="Role" asp-area="Admin" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Rol Ekle </a>
+
+<script>
+
+    function delRole(id){
+
+            Swal.fire({
+      title: "Silmek istediğinize emin misiniz?",
+      text: "Bu işlemi geri alamazsınız!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Evet, Sil!",
+      cancelButtonText: "İptal Et"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "/Admin/Role/DeleteRole/" + id
+      }
+    });
+
+    }
+
+</script>

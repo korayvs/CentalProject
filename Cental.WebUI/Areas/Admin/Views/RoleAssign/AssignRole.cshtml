@@ -1,9 +1,10 @@
 ﻿@model List<AssignRoleDto>
 @{
     ViewData["Title"] = "Rol Atama";
-    Layout = "~/Views/AdminLayout/Layout.cshtml";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
 }
 
+<h4>@ViewBag.fullname için Rol Seç</h4>
 <form method="post">
 
     @for (int i = 0; i < Model.Count; i++)
@@ -12,7 +13,7 @@
         <input type="hidden" asp-for="@Model[i].RoleName" />
         <input type="hidden" asp-for="@Model[i].RoleId" />
 
-        <div class="form-check">            
+        <div class="form-check">
             <input type="checkbox" asp-for="@Model[i].RoleExist" class="form-check-input" />
             <label class="form-check-label" for="@Model[i].RoleExist">@Model[i].RoleName</label>
         </div>

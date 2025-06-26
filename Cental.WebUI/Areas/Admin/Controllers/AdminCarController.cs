@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Cental.BusinessLayer.Abstract;
+using Cental.DtoLayer.AboutDtos;
 using Cental.DtoLayer.CarDtos;
 using Cental.DtoLayer.Enums;
 using Cental.EntityLayer.Entities;
@@ -8,8 +9,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Cental.WebUI.Controllers
+namespace Cental.WebUI.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     [Authorize(Roles = "Admin")]
     public class AdminCarController(ICarService _carService, IMapper _mapper, IBrandService _brandService) : Controller
     {
@@ -25,16 +27,17 @@ namespace Cental.WebUI.Controllers
                                   Value = x.BrandId.ToString(),
                               }).ToList();
         }
+
         public IActionResult Index()
         {
             var values = _carService.TGetAll();
-            return View(values);
+            var cardto = _mapper.Map<List<ResultCarDto>>(values);
+            return View(cardto);
         }
 
         public IActionResult CreateCar()
         {
             GetValuesinDropDown();
-
             return View();
         }
 
@@ -43,6 +46,28 @@ namespace Cental.WebUI.Controllers
         {
             var newCar = _mapper.Map<Car>(model);
             _carService.TCreate(newCar);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult UpdateCar(int id)
+        {
+            GetValuesinDropDown();
+            var model = _carService.TGetById(id);
+            var cardto = _mapper.Map<UpdateCarDto>(model);
+            return View(cardto);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateCar(UpdateCarDto model)
+        {
+            var car = _mapper.Map<Car>(model);
+            _carService.TUpdate(car);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult DeleteCar(int id)
+        {
+            _carService.TDelete(id);
             return RedirectToAction("Index");
         }
     }
