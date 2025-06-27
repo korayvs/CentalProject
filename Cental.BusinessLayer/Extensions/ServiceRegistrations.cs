@@ -40,6 +40,9 @@ namespace Cental.BusinessLayer.Extensions
             services.AddScoped<IReviewDal, EfReviewDal>();
             services.AddScoped<IReviewService, ReviewManager>();
 
+            services.AddScoped<IContactInfoDal, EfContactInfoDal>();
+            services.AddScoped<IContactInfoService, ContactInfoManager>();
+
             services.AddScoped<IImageService, ImageService>();
         }
     }
