@@ -30,5 +30,5 @@ Admin tarafında tüm tabloların listelenmesi ve CRUD işlemleri yapılacak
 
 Araçlara yorum ve puan verme kısmı olacak *****
 
-UI Layout Navbar içerisinden tüm sayfalara erişim sağlanacak
--Giriş Yap ve Kayıt Ol kısmı Navbar içerisinde olacak
+***** UI Layout Navbar içerisinden tüm sayfalara erişim sağlanacak
+-Giriş Yap ve Kayıt Ol kısmı Navbar içerisinde olacak *****
