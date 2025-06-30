@@ -1,0 +1,22 @@
+﻿@model UpdateFeatureDto
+@{
+    ViewData["Title"] = "Özellik Güncelle";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
+}
+
+<form method="post">
+
+    @Html.HiddenFor(x => x.FeatureId)
+    <label>Simgesi</label>
+    <input type="text" asp-for="Icon" class="form-control" />
+    <br />
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <span asp-validation-for="Description" class="text-danger"></span>
+    <br />
+    <button class="btn btn-outline-info"> Güncelle </button>
+
+</form>

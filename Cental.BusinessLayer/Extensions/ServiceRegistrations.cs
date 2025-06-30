@@ -43,6 +43,9 @@ namespace Cental.BusinessLayer.Extensions
             services.AddScoped<IContactInfoDal, EfContactInfoDal>();
             services.AddScoped<IContactInfoService, ContactInfoManager>();
 
+            services.AddScoped<IFeatureDal, EfFeatureDal>();
+            services.AddScoped<IFeatureService, FeatureManager>();
+
             services.AddScoped<IImageService, ImageService>();
         }
     }

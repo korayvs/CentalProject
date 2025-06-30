@@ -21,6 +21,7 @@
                     <span class="fas fa-map-marker-alt"></span> <span class="ms-1">Alış Yeri</span>
                 </div>
                 <input asp-for="PickUpLocation" class="form-control" type="text" placeholder="Şehir, bölge veya havaalanı girin" aria-label="Şehir, bölge veya havaalanı girin">
+                <span asp-validation-for="PickUpLocation" class="text-danger"></span>
             </div>
         </div>
         <div class="col-12">
@@ -30,6 +31,7 @@
                     <span class="fas fa-map-marker-alt"></span><span class="ms-1">İade Yeri</span>
                 </div>
                 <input asp-for="DropOffLocation" class="form-control" type="text" placeholder="Şehir, bölge veya havaalanı girin" aria-label="Şehir, bölge veya havaalanı girin">
+                <span asp-validation-for="DropOffLocation" class="text-danger"></span>
             </div>
         </div>
         <div class="col-12">
@@ -38,6 +40,7 @@
                     <span class="fas fa-calendar-alt"></span><span class="ms-1">Alış Tarihi</span>
                 </div>
                 <input asp-for="PickUpDate" class="form-control" type="date" min="2025-01-01" value="2025-01-01">
+                <span asp-validation-for="PickUpDate" class="text-danger"></span>
             </div>
         </div>
         <div class="col-12">
@@ -46,6 +49,7 @@
                     <span class="fas fa-calendar-alt"></span><span class="ms-1">İade Tarihi</span>
                 </div>
                 <input asp-for="DropOffDate" class="form-control" type="date" min="2025-01-01" value="2025-01-01">
+                <span asp-validation-for="DropOffDate" class="text-danger"></span>
             </div>
         </div>
         <div>
@@ -66,7 +70,7 @@
 
             if (!isAuthenticated) {
                 Swal.fire({
-                    title: "Giriş Yapmanız Gerekiyor",
+                    title: "Giriş Yapmanız Gerekiyor!",
                     text: "Lütfen rezervasyon yapmadan önce giriş yapın.",
                     icon: "error",
                     confirmButtonText: "Tamam"
@@ -75,18 +79,18 @@
             }
 
             Swal.fire({
-                title: "Rezervasyonunuzu göndermek ister misiniz?",
+                title: "Rezervasyonu göndermek ister misiniz?",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#3085d6",
                 cancelButtonColor: "#d33",
-                confirmButtonText: "Evet, gönder",
-                cancelButtonText: "Hayır, vazgeç"
+                confirmButtonText: "Evet",
+                cancelButtonText: "İptal"
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire({
-                        title: "Başarılı!",
-                        text: "Rezervasyonunuz bize ulaştı, en kısa zamanda geri dönüş yapılacaktır.",
+                        title: "Rezervasyon başarıyla gönderildi!",
+                        text: "Size en kısa zamanda geri dönüş yapılacaktır.",
                         icon: "success"
                     }).then(() => {
                         event.target.submit(); 
