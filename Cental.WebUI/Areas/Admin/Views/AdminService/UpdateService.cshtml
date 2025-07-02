@@ -1,12 +1,12 @@
-﻿@model UpdateFeatureDto
+﻿@model UpdateServiceDto
 @{
-    ViewData["Title"] = "Özellik Güncelle";
+    ViewData["Title"] = "Hizmet Bilgisi Güncelle";
     Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
 }
 
 <form method="post">
 
-    <input type="hidden" asp-for="FeatureId" />
+    <input type="hidden" asp-for="ServiceId" />
     <label>Simgesi</label>
     <input type="text" asp-for="Icon" class="form-control" />
     <br />

@@ -1,15 +1,12 @@
-﻿@model UpdateFeatureDto
+﻿@model UpdateProcessDto
 @{
-    ViewData["Title"] = "Özellik Güncelle";
+    ViewData["Title"] = "Süreç Bilgisi Güncelle";
     Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
 }
 
 <form method="post">
 
-    <input type="hidden" asp-for="FeatureId" />
-    <label>Simgesi</label>
-    <input type="text" asp-for="Icon" class="form-control" />
-    <br />
+    <input type="hidden" asp-for="ProcessId" />
     <label>Başlık</label>
     <input type="text" asp-for="Title" class="form-control" />
     <br />

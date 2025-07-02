@@ -8,6 +8,11 @@
 
     <input type="hidden" asp-for="UserId" value="@ViewBag.user" />
 
+    <label>Arabanızı Seçin</label>
+    <select asp-for="CarId" asp-items="@ViewBag.carList" class="form-control">
+        <option selected disabled>Puan vermek istediğiniz aracı seçin</option>
+    </select>
+    <br />
     <label>Puan Verin</label>
     <select asp-for="Rating" class="form-control">
         <option selected>Puan seçin</option>
@@ -17,12 +22,7 @@
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
-    <br />
-    <label>Arabanızı Seçin</label>
-    <select asp-for="CarId" asp-items="@ViewBag.carList" class="form-control">
-        <option selected disabled>Puan vermek istediğiniz aracı seçin</option>
-    </select>
-    <br />
+    <br />    
 
     <button class="btn btn-outline-primary"> Kaydet </button>
 

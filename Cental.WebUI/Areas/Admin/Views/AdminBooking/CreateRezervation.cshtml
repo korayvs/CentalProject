@@ -1,11 +1,20 @@
 ﻿@model CreateBookingDto
 @{
     ViewData["Title"] = "Yeni Rezervasyon Oluştur";
-    Layout = "~/Areas/Manager/Views/ManagerLayout/Index.cshtml";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
 }
 
 <form method="post">
 
+    <label>Kullanıcı Seç</label>
+    <select asp-for="UserId" class="form-control">
+        <option selected>Rezervasyonu yapacağınız kullanıcıyı seçin</option>
+        @foreach (var user in ViewBag.userList)
+        {
+            <option value="@user.Value">@user.Text</option>
+        }
+    </select>
+    <br />
     <label>Araç Seç</label>
     <select asp-for="CarId" class="form-control">
         <option selected>Aracınızı seçin</option>

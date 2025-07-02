@@ -2,7 +2,6 @@
 using Cental.BusinessLayer.Abstract;
 using Cental.DtoLayer.ReviewDtos;
 using Cental.EntityLayer.Entities;
-using Mapster;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

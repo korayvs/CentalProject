@@ -1,6 +1,6 @@
-﻿Booking Entity eklenecek ve araba kiralama işlemi ana sayfadan gerçekleşecek (SweetAlert ile kiralama talebiniz alındı)
+﻿***** Booking Entity eklenecek ve araba kiralama işlemi ana sayfadan gerçekleşecek (SweetAlert ile kiralama talebiniz alındı)
 -booking (string)status => Onay bekliyor, İptal edildi, Onaylandı 
--Admin ve Manager panelinden kontrol edilecek
+-Admin ve Manager panelinden kontrol edilecek *****
 
 Ana sayfadaki Default/Index içindeki tüm bölümler ViewComponent yapısına çevrilecek ve dinamik hala getirilecek
 -Ana sayfada araçlar en son eklenen 6 araç şeklinde slider'da gelsin

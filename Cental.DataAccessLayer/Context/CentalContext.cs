@@ -31,6 +31,7 @@ namespace Cental.DataAccessLayer.Context
         public DbSet<UserSocial> UserSocials { get; set; }
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<ContactInfo> ContactInfos { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
     }
 }
