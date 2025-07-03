@@ -28,7 +28,7 @@ Admin tarafında tüm tabloların listelenmesi ve CRUD işlemleri yapılacak
 -User Profil güncelleme alanı yapılacak
 -User Panelinde araç kiralama durumları görünecek, kiralama taleplerini liste olarak görsün ve yanında durumu yazsın *****
 
-Araçlara yorum ve puan verme kısmı olacak *****
+***** Araçlara yorum ve puan verme kısmı olacak *****
 
 ***** UI Layout Navbar içerisinden tüm sayfalara erişim sağlanacak
 -Giriş Yap ve Kayıt Ol kısmı Navbar içerisinde olacak *****

@@ -1,0 +1,42 @@
+﻿@model UpdateTestimonialDto
+@{
+    ViewData["Title"] = "Müşteri Yorumu Güncelle";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+
+    <input type="hidden" asp-for="TestimonialId" />
+    <input type="hidden" asp-for="ImageUrl" />
+    <br />
+    <img src="@Model.ImageUrl" style="height:150px; width:150px">
+    <br />
+    <label>Yeni Resim Seç</label>
+    <input type="file" asp-for="ImageFile" class="form-control" />
+    <br />
+    <label>Adı Soyadı</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+    <label>Ünvanı</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <span asp-validation-for="Title" class="text-danger"></span>
+    <br />
+    <label>Puan Verin</label>
+    <select asp-for="Review" class="form-control">
+        <option selected>Puan seçin</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br />
+    <label>Yorum</label>
+    <input type="text" asp-for="Comment" class="form-control" />
+    <span asp-validation-for="Comment" class="text-danger"></span>
+    <br />
+
+    <button class="btn btn-outline-info"> Güncelle </button>
+
+</form>
