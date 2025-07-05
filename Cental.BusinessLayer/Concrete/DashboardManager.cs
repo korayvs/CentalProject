@@ -11,82 +11,82 @@ namespace Cental.BusinessLayer.Concrete
 {
     public class DashboardManager(IDashboardDal _dashboardDal) : IDashboardService
     {
-        public int ApprovedBookingCount()
+        public int TApprovedBookingCount()
         {
             return _dashboardDal.ApprovedBookingCount();
         }
 
-        public int DeclineBookingCount()
+        public int TDeclineBookingCount()
         {
             return _dashboardDal.DeclineBookingCount();
         }
 
-        public List<Booking> GetBookings()
+        public List<Booking> TGetBookings()
         {
             return _dashboardDal.GetBookings();
         }
 
-        public List<Message> GetMessages()
+        public List<Message> TGetMessages()
         {
             return _dashboardDal.GetMessages();
         }
 
-        public double GetTestimonialAvarage()
+        public double TGetTestimonialAvarage()
         {
             return _dashboardDal.GetTestimonialAvarage();
         }
 
-        public List<Testimonial> GetTestimonials()
+        public List<Testimonial> TGetTestimonials()
         {
             return _dashboardDal.GetTestimonials();
         }
 
-        public List<Car> LastAddedCars()
+        public List<Car> TLastAddedCars()
         {
             return _dashboardDal.LastAddedCars();
         }
 
-        public int TotalBookingCount()
+        public int TTotalBookingCount()
         {
             return _dashboardDal.TotalBookingCount();
         }
 
-        public int TotalBrandCount()
+        public int TTotalBrandCount()
         {
             return _dashboardDal.TotalBrandCount();
         }
 
-        public int TotalCarCount()
+        public int TTotalCarCount()
         {
             return _dashboardDal.TotalCarCount();
         }
 
-        public int TotalManagerCount()
+        public int TTotalManagerCount()
         {
             return _dashboardDal.TotalManagerCount();
         }
 
-        public int TotalMessageCount()
+        public int TTotalMessageCount()
         {
             return _dashboardDal.TotalMessageCount();
         }
 
-        public int TotalReviewCount()
+        public int TTotalReviewCount()
         {
             return _dashboardDal.TotalReviewCount();
         }
 
-        public int TotalTestimonialCount()
+        public int TTotalTestimonialCount()
         {
             return _dashboardDal.TotalTestimonialCount();
         }
 
-        public int TotalUserCount()
+        public int TTotalUserCount()
         {
             return _dashboardDal.TotalUserCount();
         }
 
-        public int WaitingBookingCount()
+        public int TWaitingBookingCount()
         {
             return _dashboardDal.WaitingBookingCount();
         }

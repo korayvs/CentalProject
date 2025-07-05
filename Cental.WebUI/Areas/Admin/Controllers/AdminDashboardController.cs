@@ -17,6 +17,7 @@ namespace Cental.WebUI.Areas.Admin.Controllers
             ViewBag.TotalTestimonialCount = _dashboardService.TTotalTestimonialCount();
             ViewBag.TotalReviewCount = _dashboardService.TTotalReviewCount();
             ViewBag.TotalBrandCount = _dashboardService.TTotalBrandCount();
+            ViewBag.LastAddedCars = _dashboardService.TLastAddedCars();
             ViewBag.TotalBookingCount = _dashboardService.TTotalBookingCount();
             ViewBag.WaitingBookingCount = _dashboardService.TWaitingBookingCount();
             ViewBag.ApprovedBookingCount = _dashboardService.TApprovedBookingCount();

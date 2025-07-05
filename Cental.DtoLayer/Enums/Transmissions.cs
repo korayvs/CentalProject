@@ -8,9 +8,11 @@ namespace Cental.DtoLayer.Enums
 {
     public enum Transmissions
     {
+        CVT,
         Beş_İleri,
         Altı_İleri,
         Yedi_İleri,
-        Sekiz_İleri
+        Sekiz_İleri,
+        Quickshift
     }
 }
