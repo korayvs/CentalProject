@@ -46,6 +46,26 @@ namespace Cental.BusinessLayer.Concrete
             return _dashboardDal.LastAddedCars();
         }
 
+        public string TLeastSelectedCarName()
+        {
+            return _dashboardDal.LeastSelectedCarName();
+        }
+
+        public int TMostCheapCar()
+        {
+            return _dashboardDal.MostCheapCar();
+        }
+
+        public int TMostExpensiveCar()
+        {
+            return _dashboardDal.MostExpensiveCar();
+        }
+
+        public string TMostSelectedCarName()
+        {
+            return _dashboardDal.MostSelectedCarName();
+        }
+
         public int TTotalBookingCount()
         {
             return _dashboardDal.TotalBookingCount();

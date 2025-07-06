@@ -18,6 +18,10 @@ namespace Cental.WebUI.Areas.Admin.Controllers
             ViewBag.TotalReviewCount = _dashboardService.TTotalReviewCount();
             ViewBag.TotalBrandCount = _dashboardService.TTotalBrandCount();
             ViewBag.LastAddedCars = _dashboardService.TLastAddedCars();
+            ViewBag.MostCheapCar = _dashboardService.TMostCheapCar();
+            ViewBag.MostExpensiveCar = _dashboardService.TMostExpensiveCar();
+            ViewBag.MostSelectedCarName = _dashboardService.TMostSelectedCarName();
+            ViewBag.LeastSelectedCarName = _dashboardService.TLeastSelectedCarName();
             ViewBag.TotalBookingCount = _dashboardService.TTotalBookingCount();
             ViewBag.WaitingBookingCount = _dashboardService.TWaitingBookingCount();
             ViewBag.ApprovedBookingCount = _dashboardService.TApprovedBookingCount();

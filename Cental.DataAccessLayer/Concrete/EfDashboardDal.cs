@@ -1,6 +1,7 @@
 ﻿using Cental.DataAccessLayer.Abstract;
 using Cental.DataAccessLayer.Context;
 using Cental.EntityLayer.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,8 @@ namespace Cental.DataAccessLayer.Concrete
 
         public int TotalUserCount()
         {
-            return _context.Users.Count();
+            var userRole = _context.Roles.Where(x => x.Name == "User").Select(y => y.Id).FirstOrDefault();
+            return _context.UserRoles.Count(r => r.RoleId == userRole);
         }
 
         public int TotalManagerCount()
@@ -51,6 +53,28 @@ namespace Cental.DataAccessLayer.Concrete
         public int TotalBrandCount()
         {
             return _context.Brands.Count();
+        }
+
+        public int MostExpensiveCar()
+        {
+            return Convert.ToInt32(_context.Cars.Max(x => x.Price));
+        }
+
+        public int MostCheapCar()
+        {
+            return Convert.ToInt32(_context.Cars.Min(x => x.Price));
+        }
+
+        public string MostSelectedCarName()
+        {
+            var rentCar = _context.Bookings.Where(x => x.IsApproved == true).GroupBy(y => y.Car.Brand.BrandName).Select(c => new { BrandName = c.Key, Count = c.Count() }).OrderByDescending(z => z.Count).FirstOrDefault();
+            return rentCar?.BrandName ?? "Onaylanmış Araç Yok";
+        }
+
+        public string LeastSelectedCarName()
+        {
+            var leastCar = _context.Bookings.Where(x => x.IsApproved == true).GroupBy(y => y.Car.Brand.BrandName).Select(c => new { BrandName = c.Key, Count = c.Count() }).OrderBy(z => z.Count).FirstOrDefault();
+            return leastCar?.BrandName ?? "Onaylanmış Araç Yok";
         }
 
         public int TotalBookingCount()

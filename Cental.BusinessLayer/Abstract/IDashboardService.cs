@@ -22,6 +22,10 @@ namespace Cental.BusinessLayer.Abstract
         int TApprovedBookingCount();
         int TDeclineBookingCount();
         double TGetTestimonialAvarage();
+        int TMostExpensiveCar();
+        int TMostCheapCar();
+        string TMostSelectedCarName();
+        string TLeastSelectedCarName();
         List<Booking> TGetBookings();
         List<Car> TLastAddedCars();
         List<Message> TGetMessages();

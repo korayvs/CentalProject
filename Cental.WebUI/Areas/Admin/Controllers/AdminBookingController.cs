@@ -34,11 +34,12 @@ namespace Cental.WebUI.Areas.Admin.Controllers
         private List<SelectListItem> CarSelectedList()
         {
             var carList = (from car in _carService.TGetAll()
-                            select new SelectListItem
-                            {
-                                Text = car.Brand.BrandName + " " + car.ModelName + car.Year,
-                                Value = car.CarId.ToString()
-                            }).ToList();
+                           orderby car.Brand.BrandName
+                           select new SelectListItem
+                           {
+                               Text = car.Brand.BrandName + " " + car.ModelName + " " + car.Year,
+                               Value = car.CarId.ToString()
+                           }).ToList();
             return carList;
         }
 

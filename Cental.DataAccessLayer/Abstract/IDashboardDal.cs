@@ -21,6 +21,10 @@ namespace Cental.DataAccessLayer.Abstract
         int ApprovedBookingCount();
         int DeclineBookingCount();
         double GetTestimonialAvarage();
+        int MostExpensiveCar();
+        int MostCheapCar();
+        string MostSelectedCarName();
+        string LeastSelectedCarName();
         List<Booking> GetBookings();
         List<Car> LastAddedCars();
         List<Message> GetMessages();

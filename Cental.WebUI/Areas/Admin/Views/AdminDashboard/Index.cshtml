@@ -38,8 +38,8 @@
                             <i class="icon feather icon-file-text text-c-blue mb-1 d-block"></i>
                         </div>
                         <div class="col-sm-8 text-md-center">
-                            <h5>@ViewBag.TotalCarCount</h5>
-                            <span>Toplam Araç Sayısı</span>
+                            <h5>@ViewBag.TotalBrandCount</h5>
+                            <span>Toplam Marka Sayısı</span>
                         </div>
                     </div>
                 </div>
@@ -49,13 +49,40 @@
                             <i class="icon feather icon-mail text-c-yellow mb-1 d-block"></i>
                         </div>
                         <div class="col-sm-8 text-md-center">
-                            <h5>@ViewBag.TotalBrandCount</h5>
-                            <span>Toplam Marka Sayısı</span>
+                            <h5>@ViewBag.TotalCarCount</h5>
+                            <span>Toplam Araç Sayısı</span>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
+
+        <div class="card flat-card">
+            <div class="row-table">
+                <div class="col-sm-6 card-body br">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <i class="icon feather icon-file-text text-c-blue mb-1 d-block"></i>
+                        </div>
+                        <div class="col-sm-8 text-md-center">
+                            <h5>@ViewBag.MostCheapCar ₺</h5>
+                            <span>En Ucuz Kİra Fİyatı</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 card-body">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <i class="icon feather icon-mail text-c-yellow mb-1 d-block"></i>
+                        </div>
+                        <div class="col-sm-8 text-md-center">
+                            <h5>@ViewBag.MostExpensiveCar ₺</h5>
+                            <span>En Pahalı Kİra Fİyatı</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="row-table">
                 <div class="col-sm-6 card-body br">
@@ -64,8 +91,8 @@
                             <i class="icon feather icon-file-text text-c-blue mb-1 d-block"></i>
                         </div>
                         <div class="col-sm-8 text-md-center">
-                            <h5>@ViewBag.TotalMessageCount</h5>
-                            <span>Toplam Mesaj Sayısı</span>
+                            <h5>@ViewBag.MostSelectedCarName</h5>
+                            <span>En Çok Seçİlen Araba Modelİ </span>
                         </div>
                     </div>
                 </div>
@@ -75,15 +102,15 @@
                             <i class="icon feather icon-mail text-c-yellow mb-1 d-block"></i>
                         </div>
                         <div class="col-sm-8 text-md-center">
-                            <h5>@ViewBag.TotalTestimonialCount</h5>
-                            <span>Toplam Yorum Sayısı</span>
+                            <h5>@ViewBag.LeastSelectedCarName</h5>
+                            <span>En Az Seçİlen Araba Modelİ</span>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
+
+
         <!-- widget primary card start -->
         <div class="card flat-card widget-primary-card">
             <div class="row-table">
@@ -162,7 +189,33 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div class="card flat-card">
+            <div class="row-table">
+                <div class="col-sm-6 card-body br">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <i class="icon feather icon-rotate-ccw text-c-blue mb-1 d-block"></i>
+                        </div>
+                        <div class="col-sm-8 text-md-center">
+                            <h5>@ViewBag.TotalReviewCount</h5>
+                            <span>Toplam Değerledirme Sayısı</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 card-body">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <i class="icon feather icon-shopping-cart text-c-blue mb-1 d-blockz"></i>
+                        </div>
+                        <div class="col-sm-8 text-md-center">
+                            <h5>@ViewBag.GetTestimonialAvarage / 5</h5>
+                            <span>Değerlendirme - Puan Ortalaması</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="row-table">
                 <div class="col-sm-6 card-body br">
@@ -189,6 +242,8 @@
                 </div>
             </div>
         </div>
+
+
         <!-- widget-success-card start -->
         <div class="card flat-card widget-purple-card">
             <div class="row-table">

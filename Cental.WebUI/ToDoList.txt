@@ -14,12 +14,12 @@ Footer alanı dinamik hale getirilecek
 
 Topbar kısmı dinamik hale getirilecek
 
-Admin tarafında tüm tabloların listelenmesi ve CRUD işlemleri yapılacak
+***** Admin tarafında tüm tabloların listelenmesi ve CRUD işlemleri yapılacak
 -Admin tarafında bir Dashboard alanı olacak ve istatistik bilgileri getirilecek (Controller'dan Service (I/Dasboard Service - Abstract, Concrete) ile yapma)[flat-able-admin/dist/index]
 (Toplam kullanıcı sayısı(User rolü olan), toplam gelen mesaj sayısı, toplam araç sayısı, kiralanan araç sayısı, onay bekleyen kiralama)
 --İstatistik altında(Projects) son eklenen araçlar (6 adet) ve son eklenen kiralama talepleri (5 adet) listelenecek
 --Ortalama puan
--Admin gelen mesajları okusun
+-Admin gelen mesajları okusun *****
 
 ***** Manager Profil güncelleme alanı yapılacak
 -Manager tarafında Booking tablosu, MySocial, Profile listelenecek ve onaylanacak *****

@@ -5,9 +5,12 @@ using Cental.DtoLayer.CarDtos;
 using Cental.DtoLayer.Enums;
 using Cental.EntityLayer.Entities;
 using Cental.WebUI.Extensions;
+using Humanizer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using PagedList.Core;
+using System.Drawing.Printing;
 
 namespace Cental.WebUI.Areas.Admin.Controllers
 {
@@ -21,6 +24,7 @@ namespace Cental.WebUI.Areas.Admin.Controllers
             ViewBag.gearTypes = GetEnumValues.GetEnums<GearTypes>();
             ViewBag.transmissions = GetEnumValues.GetEnums<Transmissions>();
             ViewBag.brands = (from x in _brandService.TGetAll()
+                              orderby x.BrandName
                               select new SelectListItem
                               {
                                   Text = x.BrandName,
@@ -28,11 +32,13 @@ namespace Cental.WebUI.Areas.Admin.Controllers
                               }).ToList();
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1, int pageSize = 10)
         {
             var values = _carService.TGetAll();
             var cardto = _mapper.Map<List<ResultCarDto>>(values);
-            return View(cardto);
+            var sortedDto = cardto.OrderBy(x => x.Brand.BrandName).AsQueryable();
+            var pagedList = new PagedList<ResultCarDto>(sortedDto, page, pageSize);
+            return View(pagedList);
         }
 
         public IActionResult CreateCar()

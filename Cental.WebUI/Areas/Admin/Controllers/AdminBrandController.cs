@@ -12,7 +12,7 @@ namespace Cental.WebUI.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class AdminBrandController(IBrandService _brandService, IMapper _mapper) : Controller
     {
-        public IActionResult Index(int page = 1, int pageSize = 3)
+        public IActionResult Index(int page = 1, int pageSize = 5)
         {
             var value = _brandService.TGetAll();
             var dto = _mapper.Map<List<ResultBrandDto>>(value);
