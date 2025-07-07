@@ -12,6 +12,7 @@ namespace Cental.BusinessLayer.Abstract
     {
         int TTotalUserCount();
         int TTotalManagerCount();
+        int TTotalAdminCount();
         int TTotalMessageCount();
         int TTotalCarCount();
         int TTotalTestimonialCount();

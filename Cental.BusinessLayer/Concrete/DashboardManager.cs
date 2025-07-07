@@ -66,6 +66,11 @@ namespace Cental.BusinessLayer.Concrete
             return _dashboardDal.MostSelectedCarName();
         }
 
+        public int TTotalAdminCount()
+        {
+            return _dashboardDal.TotalAdminCount();
+        }
+
         public int TTotalBookingCount()
         {
             return _dashboardDal.TotalBookingCount();

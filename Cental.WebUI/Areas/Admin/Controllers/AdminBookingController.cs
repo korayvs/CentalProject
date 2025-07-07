@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using PagedList.Core;
 
 namespace Cental.WebUI.Areas.Admin.Controllers
 {
@@ -13,11 +14,13 @@ namespace Cental.WebUI.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class AdminBookingController(IBookingService _bookingService, ICarService _carService, IMapper _mapper, UserManager<AppUser> _userManager) : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(int page = 1, int pageSize = 10)
         {
             var values = _bookingService.TGetAll();
             var dtos = _mapper.Map<List<ResultBookingDto>>(values);
-            return View(dtos);
+            var bookings = dtos.AsQueryable();
+            var pagedList = new PagedList<ResultBookingDto>(bookings, page, pageSize);
+            return View(pagedList);
         }
 
         private List<SelectListItem> UserSelectedList()

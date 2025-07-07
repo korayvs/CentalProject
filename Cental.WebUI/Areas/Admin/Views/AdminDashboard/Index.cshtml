@@ -3,6 +3,8 @@
     Layout = "~/Areas/Admin/Views/AdminDashboardLayout/Layout.cshtml";
 }
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <!-- [ Main Content ] start -->
 <div class="row">
     <div class="col-md-12 col-xl-6">
@@ -11,7 +13,7 @@
                 <div class="col-sm-6 card-body br">
                     <div class="row">
                         <div class="col-sm-4">
-                            <i class="icon feather icon-eye text-c-green mb-1 d-block"></i>
+                            <i class="fa-solid fa-users" style="color: #00ff2a;"></i>
                         </div>
                         <div class="col-sm-8 text-md-center">
                             <h5>@ViewBag.TotalUserCount</h5>
@@ -22,7 +24,7 @@
                 <div class="col-sm-6 card-body">
                     <div class="row">
                         <div class="col-sm-4">
-                            <i class="icon feather icon-music text-c-red mb-1 d-block"></i>
+                            <i class="fa-solid fa-user-tie" style="color: #ff0000;"></i>
                         </div>
                         <div class="col-sm-8 text-md-center">
                             <h5>@ViewBag.TotalManagerCount</h5>
@@ -35,7 +37,7 @@
                 <div class="col-sm-6 card-body br">
                     <div class="row">
                         <div class="col-sm-4">
-                            <i class="icon feather icon-file-text text-c-blue mb-1 d-block"></i>
+                            <i class="fa-regular fa-bookmark" style="color:forestgreen;"></i>
                         </div>
                         <div class="col-sm-8 text-md-center">
                             <h5>@ViewBag.TotalBrandCount</h5>
@@ -46,7 +48,7 @@
                 <div class="col-sm-6 card-body">
                     <div class="row">
                         <div class="col-sm-4">
-                            <i class="icon feather icon-mail text-c-yellow mb-1 d-block"></i>
+                            <i class="fa fa-car-rear" style="color: #FFD43B;"></i>
                         </div>
                         <div class="col-sm-8 text-md-center">
                             <h5>@ViewBag.TotalCarCount</h5>
@@ -57,13 +59,51 @@
             </div>
         </div>
 
+        <!-- widget primary card start -->
+        <div class="card flat-card widget-primary-card" style="background-color:#538D8E">
+            <div class="row-table">
+                <div class="col-sm-3 card-body" style="background-color:#4a7e7f">
+                    <i class="feather icon-star-on"></i>
+                </div>
+                <div class="col-sm-9">
+                    <h4>@ViewBag.TotalReviewCount</h4>
+                    <h6>Toplam Değerledirme Sayısı</h6>
+                </div>
+            </div>
+        </div>
+        <div class="card flat-card widget-primary-card">
+            <div class="row-table">
+                <div class="col-sm-3 card-body">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div class="col-sm-9">
+                    <h4>@ViewBag.TotalBookingCount</h4>
+                    <h6>Toplam Rezervasyon Sayısı</h6>
+                </div>
+            </div>
+        </div>
 
+        <div class="card flat-card widget-primary-card" style="background-color:orange">
+            <div class="row-table">
+                <div class="col-sm-3 card-body" style="background-color:darkorange">
+                    <i class="feather icon-user-minus"></i>
+                </div>
+                <div class="col-sm-9">
+                    <h4>@ViewBag.WaitingBookingCount</h4>
+                    <h6>Bekleyen Rezervasyonlar</h6>
+                </div>
+            </div>
+        </div>
+        <!-- widget primary card end -->
+    </div>
+
+    <div class="col-md-12 col-xl-6">
         <div class="card flat-card">
             <div class="row-table">
                 <div class="col-sm-6 card-body br">
                     <div class="row">
                         <div class="col-sm-4">
-                            <i class="icon feather icon-file-text text-c-blue mb-1 d-block"></i>
+                            <i class="fa-solid fa-tag" style="color: #ff9500;"></i>
                         </div>
                         <div class="col-sm-8 text-md-center">
                             <h5>@ViewBag.MostCheapCar ₺</h5>
@@ -74,7 +114,7 @@
                 <div class="col-sm-6 card-body">
                     <div class="row">
                         <div class="col-sm-4">
-                            <i class="icon feather icon-mail text-c-yellow mb-1 d-block"></i>
+                            <i class="fa-solid fa-dollar-sign" style="color:green;"></i>
                         </div>
                         <div class="col-sm-8 text-md-center">
                             <h5>@ViewBag.MostExpensiveCar ₺</h5>
@@ -88,7 +128,7 @@
                 <div class="col-sm-6 card-body br">
                     <div class="row">
                         <div class="col-sm-4">
-                            <i class="icon feather icon-file-text text-c-blue mb-1 d-block"></i>
+                            <i class="fa-solid fa-fire" style="color:red;"></i>
                         </div>
                         <div class="col-sm-8 text-md-center">
                             <h5>@ViewBag.MostSelectedCarName</h5>
@@ -99,7 +139,7 @@
                 <div class="col-sm-6 card-body">
                     <div class="row">
                         <div class="col-sm-4">
-                            <i class="icon feather icon-mail text-c-yellow mb-1 d-block"></i>
+                            <i class="fa-solid fa-snowflake" style="color:deepskyblue;"></i>
                         </div>
                         <div class="col-sm-8 text-md-center">
                             <h5>@ViewBag.LeastSelectedCarName</h5>
@@ -110,145 +150,22 @@
             </div>
         </div>
 
-
-        <!-- widget primary card start -->
-        <div class="card flat-card widget-primary-card">
-            <div class="row-table">
-                <div class="col-sm-3 card-body">
-                    <i class="feather icon-star-on"></i>
-                </div>
-                <div class="col-sm-9">
-                    <h4>@ViewBag.TotalBookingCount</h4>
-                    <h6>Toplam Rezervasyon Sayısı</h6>
-                </div>
-            </div>
-        </div>
-
-        <div class="card flat-card widget-primary-card" style="background-color:orange">
-            <div class="row-table">
-                <div class="col-sm-3 card-body" style="background-color:darkorange">
-                    <i class="feather icon-star-on"></i>
-                </div>
-                <div class="col-sm-9">
-                    <h4>@ViewBag.WaitingBookingCount</h4>
-                    <h6>Bekleyen Rezervasyonlar</h6>
-                </div>
-            </div>
-        </div>
-        <!-- widget primary card end -->
-    </div>
-
-
-    <div class="col-md-12 col-xl-6">
-        <div class="card flat-card">
-            <div class="row-table">
-                <div class="col-sm-6 card-body br">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <i class="icon feather icon-share-2 text-c-blue mb-1 d-block"></i>
-                        </div>
-                        <div class="col-sm-8 text-md-center">
-                            <h5>@ViewBag.TotalBookingCount</h5>
-                            <span>Toplam Rezervasyon Sayısı</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 card-body">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <i class="icon feather icon-wifi text-c-blue mb-1 d-block"></i>
-                        </div>
-                        <div class="col-sm-8 text-md-center">
-                            <h5>@ViewBag.ApprovedBookingCount</h5>
-                            <span>Onaylanan Rezervasyonlar</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row-table">
-                <div class="col-sm-6 card-body br">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <i class="icon feather icon-rotate-ccw text-c-blue mb-1 d-block"></i>
-                        </div>
-                        <div class="col-sm-8 text-md-center">
-                            <h5>@ViewBag.WaitingBookingCount</h5>
-                            <span>Bekleyen Rezervasyonlar</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 card-body">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <i class="icon feather icon-shopping-cart text-c-blue mb-1 d-blockz"></i>
-                        </div>
-                        <div class="col-sm-8 text-md-center">
-                            <h5>@ViewBag.DeclineBookingCount</h5>
-                            <span>Reddedilen Rezervasyonlar</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card flat-card">
-            <div class="row-table">
-                <div class="col-sm-6 card-body br">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <i class="icon feather icon-rotate-ccw text-c-blue mb-1 d-block"></i>
-                        </div>
-                        <div class="col-sm-8 text-md-center">
-                            <h5>@ViewBag.TotalReviewCount</h5>
-                            <span>Toplam Değerledirme Sayısı</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 card-body">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <i class="icon feather icon-shopping-cart text-c-blue mb-1 d-blockz"></i>
-                        </div>
-                        <div class="col-sm-8 text-md-center">
-                            <h5>@ViewBag.GetTestimonialAvarage / 5</h5>
-                            <span>Değerlendirme - Puan Ortalaması</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row-table">
-                <div class="col-sm-6 card-body br">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <i class="icon feather icon-rotate-ccw text-c-blue mb-1 d-block"></i>
-                        </div>
-                        <div class="col-sm-8 text-md-center">
-                            <h5>@ViewBag.TotalReviewCount</h5>
-                            <span>Toplam Değerledirme Sayısı</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 card-body">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <i class="icon feather icon-shopping-cart text-c-blue mb-1 d-blockz"></i>
-                        </div>
-                        <div class="col-sm-8 text-md-center">
-                            <h5>@ViewBag.GetTestimonialAvarage / 5</h5>
-                            <span>Değerlendirme - Puan Ortalaması</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
         <!-- widget-success-card start -->
+        <div class="card flat-card widget-purple-card" style="background-color:#c8cc00">
+            <div class="row-table">
+                <div class="col-sm-3 card-body" style="background-color:#afb300">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="col-sm-9">
+                    <h4>@ViewBag.GetTestimonialAvarage</h4>
+                    <h6>Değerlendirme - Puan Ortalaması</h6>
+                </div>
+            </div>
+        </div>
         <div class="card flat-card widget-purple-card">
             <div class="row-table">
                 <div class="col-sm-3 card-body">
-                    <i class="fas fa-trophy"></i>
+                    <i class="feather icon-user-check"></i>
                 </div>
                 <div class="col-sm-9">
                     <h4>@ViewBag.ApprovedBookingCount</h4>
@@ -259,7 +176,7 @@
         <div class="card flat-card widget-purple-card" style="background-color:red">
             <div class="row-table">
                 <div class="col-sm-3 card-body" style="background-color:#e60000">
-                    <i class="fas fa-trophy"></i>
+                    <i class="feather icon-user-x"></i>
                 </div>
                 <div class="col-sm-9">
                     <h4>@ViewBag.DeclineBookingCount</h4>

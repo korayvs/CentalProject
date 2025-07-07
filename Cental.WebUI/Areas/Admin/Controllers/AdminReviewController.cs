@@ -36,6 +36,7 @@ namespace Cental.WebUI.Areas.Admin.Controllers
         {
             var cars = _carService.TGetAll();
             var carList = (from car in cars
+                           orderby car.Brand.BrandName
                             select new SelectListItem
                             {
                                 Text = car.Brand.BrandName + " " + car.ModelName + " " + car.Year,

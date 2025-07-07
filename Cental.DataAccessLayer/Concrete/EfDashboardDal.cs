@@ -30,6 +30,12 @@ namespace Cental.DataAccessLayer.Concrete
             return _context.UserRoles.Count(r => r.RoleId == managerRole);
         }
 
+        public int TotalAdminCount()
+        {
+            var adminRole = _context.Roles.Where(x => x.Name == "Admin").Select(y => y.Id).FirstOrDefault();
+            return _context.UserRoles.Count(r => r.RoleId == adminRole);
+        }
+
         public int TotalMessageCount()
         {
             return _context.Messages.Count();

@@ -1,8 +1,8 @@
-﻿@model List<ResultBookingDto>
+﻿@model PagedList<ResultBookingDto>
 @{
     ViewData["Title"] = "Rezervasyonlar";
     Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
-    int count = 0;
+    int count = (Model.PageNumber - 1) * Model.PageSize;
 }
 
 <table class="table table-bordered">
@@ -56,6 +56,10 @@
         </tr>
     }
 </table>
+
+<div class="text-center">
+    <pager asp-action="Index" asp-controller="AdminBooking" asp-area="Admin" list="@Model"></pager>
+</div>
 
 <a asp-action="CreateRezervation" asp-controller="AdminBooking" class="btn btn-primary">Yeni Rezervasyon Ekle</a>
 

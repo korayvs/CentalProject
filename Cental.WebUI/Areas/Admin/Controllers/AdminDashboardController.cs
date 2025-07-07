@@ -12,6 +12,7 @@ namespace Cental.WebUI.Areas.Admin.Controllers
         {
             ViewBag.TotalUserCount = _dashboardService.TTotalUserCount();
             ViewBag.TotalManagerCount = _dashboardService.TTotalManagerCount();
+            ViewBag.TotalAdminCount = _dashboardService.TTotalAdminCount();
             ViewBag.TotalMessageCount = _dashboardService.TTotalMessageCount();
             ViewBag.TotalCarCount = _dashboardService.TTotalCarCount();
             ViewBag.TotalTestimonialCount = _dashboardService.TTotalTestimonialCount();

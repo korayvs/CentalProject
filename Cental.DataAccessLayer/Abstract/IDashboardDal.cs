@@ -11,6 +11,7 @@ namespace Cental.DataAccessLayer.Abstract
     {
         int TotalUserCount();
         int TotalManagerCount();
+        int TotalAdminCount();
         int TotalMessageCount();
         int TotalCarCount();
         int TotalTestimonialCount();
