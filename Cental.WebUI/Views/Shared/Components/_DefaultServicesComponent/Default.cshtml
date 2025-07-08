@@ -1,0 +1,31 @@
+﻿
+@*
+    _DefaultServicesComponent
+*@
+
+<div class="container-fluid service py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h1 class="display-5 text-capitalize mb-3">Cental <span class="text-primary">Hizmetleri</span></h1>
+            <p class="mb-0">
+                Müşterilerimize konforlu ve güvenli bir deneyim sunmak için çeşitli hizmetler sağlıyoruz. İhtiyacınıza yönelik çözümlerle her zaman yanınızdayız.
+            </p>
+        </div>
+        <div class="row g-4">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item p-4">
+                        <div class="service-icon mb-4">
+                            <i class="@item.Icon"></i>
+                        </div>
+                        <h5 class="mb-3">@item.Title</h5>
+                        <p class="mb-0">@item.Description</p>
+                    </div>
+                </div>
+            }            
+
+        </div>
+    </div>
+</div>

@@ -22,7 +22,7 @@ namespace Cental.WebUI.ViewComponents.Cars
             ViewBag.gasTypes = GetEnumValues.GetEnums<GasTypes>();
             ViewBag.gearTypes = GetEnumValues.GetEnums<GearTypes>();
 
-            return View();
+            return View(brands);
         }
     }
 }

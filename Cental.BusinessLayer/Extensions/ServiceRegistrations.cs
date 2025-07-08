@@ -61,6 +61,9 @@ namespace Cental.BusinessLayer.Extensions
             services.AddScoped<IDashboardDal, EfDashboardDal>();
             services.AddScoped<IDashboardService, DashboardManager>();
 
+            services.AddScoped<IFactCounterDal, EfFactCounterDal>();
+            services.AddScoped<IFactCounterService, FactCounterManager>();
+
             services.AddScoped<IImageService, ImageService>();
         }
     }

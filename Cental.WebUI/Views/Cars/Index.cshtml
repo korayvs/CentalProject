@@ -19,7 +19,79 @@
         <div class="container">
             <div class="row">
 
+
                 @foreach (var item in Model)
+                {
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="categories-img rounded-top" style="height:300px; weight:400px;">
+                                <img src="@item.ImageUrl" style="height:300px; weight:400px;" class="img-fluid w-100 rounded-top" alt="@item.Brand.BrandName @item.ModelName">
+                            </div>
+                            <div class="categories-content rounded-bottom p-4">
+                                <h4>@item.Brand.BrandName @item.ModelName</h4>
+
+                                @{
+                                    bool hasReviews = item.Reviews != null && item.Reviews.Any();
+                                    double averageRating = item.Reviews != null && item.Reviews.Any() ? item.Reviews.Average(r => r.Rating) : 0;
+
+                                    int fullStars = (int)Math.Floor(averageRating);
+                                    int emptyStars = 5 - fullStars;
+                                }
+
+                                <div class="categories-review mb-4">
+                                    <div class="me-3">Puanı:</div>
+                                    @if (hasReviews)
+                                    {
+                                        <div class="d-flex justify-content-center text-secondary">
+
+                                            @for (int i = 0; i < fullStars; i++)
+                                            {
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                            }
+                                            @for (int i = 0; i < emptyStars; i++)
+                                            {
+                                                <i class="fas fa-star text-body"></i>
+                                            }
+
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="text-muted">Değerlendirilmedi</div>
+                                    }
+
+                                </div>
+                                <div class="mb-4">
+                                    <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">@((int)item.Price) ₺ / Günlük</h4>
+                                </div>
+                                <div class="row gy-2 gx-0 text-center mb-4">
+                                    <div class="col-4 border-end border-white">
+                                        <i class="fa fa-users text-dark"></i> <span class="text-body ms-1">@item.SeatCount Koltuk</span>
+                                    </div>
+                                    <div class="col-4 border-end border-white">
+                                        <i class="fa fa-car text-dark"></i> <span class="text-body ms-1">@item.GearType</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fa fa-gas-pump text-dark"></i> <span class="text-body ms-1">@item.GasType</span>
+                                    </div>
+                                    <div class="col-4 border-end border-white">
+                                        <i class="fa fa-car text-dark"></i> <span class="text-body ms-1">@item.Year</span>
+                                    </div>
+                                    <div class="col-4 border-end border-white">
+                                        <i class="fa fa-cogs text-dark"></i> <span class="text-body ms-1">@item.Transmission</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fa fa-road text-dark"></i> <span class="text-body ms-1">@item.Kilometer Km</span>
+                                    </div>
+                                </div>
+                                <a href="/Default/Index" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">Şimdi Kirala</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                @* @foreach (var item in Model)
                 {
                     <div class="col-md-4 col-sm-6 mb-4">
                         <div class="card h-100 shadow-sm">
@@ -47,7 +119,7 @@
                             </div>
                         </div>
                     </div>
-                }
+                } *@
 
             </div>
 
