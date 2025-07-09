@@ -10,6 +10,7 @@ namespace Cental.WebUI.ViewComponents.Default
         public IViewComponentResult Invoke(Booking model)
         {
             var carList = (from car in _carService.TGetAll()
+                           orderby car.Brand.BrandName
                            select new SelectListItem
                            {
                                Text = car.Brand.BrandName + " " + car.ModelName + " " + car.Year,

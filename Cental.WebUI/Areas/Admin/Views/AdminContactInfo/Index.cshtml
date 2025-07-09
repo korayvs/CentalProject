@@ -37,14 +37,14 @@
             <td>@item.OpeningHours</td>            
             <td>@item.ClosingHours</td>            
             <td>
-                <button onclick="delInfo(@item.ContactInfoId)" class="btn btn-danger btn-sm">Sil</button>
-                <a asp-action="UpdateContactInfo" asp-route-id="@item.ContactInfoId" class="btn btn-info btn-sm">Güncelle</a>
+                <button onclick="delInfo(@item.ContactInfoId)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                <a asp-action="UpdateContactInfo" asp-route-id="@item.ContactInfoId" class="btn btn-info btn-sm"><i class="fa fa-pen"></i></a>
             </td>
         </tr>
     }
 </table>
 
-<a asp-action="CreateContactInfo" asp-controller="AdminContactInfo" asp-area="Admin" class="btn btn-primary"> Yeni Bilgi Ekle </a>
+<a asp-action="CreateContactInfo" asp-controller="AdminContactInfo" asp-area="Admin" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Bilgi Ekle </a>
 
 <script>
 

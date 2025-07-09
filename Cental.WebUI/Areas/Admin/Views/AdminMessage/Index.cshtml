@@ -25,14 +25,14 @@
             <td>@item.Subject</td>
             <td>
                 <a asp-action="DetailMessage" asp-area="Admin" asp-route-id="@item.MessageId" class="btn btn-dark">Detaylar</a>
-                <button onclick="delMessage(@item.MessageId)" class="btn btn-danger">Sil</button>                
+                <button onclick="delMessage(@item.MessageId)" class="btn btn-danger"><i class="fa fa-trash"></i></button>
             </td>
         </tr>
     }
 
 </table>
 
-<a asp-action="CreateMessage" asp-controller="AdminMessage" asp-area="Admin" class="btn btn-primary">Yeni Mesaj Ekle</a>
+<a asp-action="CreateMessage" asp-controller="AdminMessage" asp-area="Admin" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Mesaj Ekle </a>
 
 <script>
 

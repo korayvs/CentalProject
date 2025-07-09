@@ -2,10 +2,10 @@
 -booking (string)status => Onay bekliyor, İptal edildi, Onaylandı 
 -Admin ve Manager panelinden kontrol edilecek *****
 
-Ana sayfadaki Default/Index içindeki tüm bölümler ViewComponent yapısına çevrilecek ve dinamik hala getirilecek
--Ana sayfada araçlar en son eklenen 6 araç şeklinde slider'da gelsin
+***** Ana sayfadaki Default/Index içindeki tüm bölümler ViewComponent yapısına çevrilecek ve dinamik hala getirilecek
+-Ana sayfada araçlar en son eklenen 6 araç şeklinde slider'da gelsin *****
 
-Counter içerisine İstatistik bilgileri getirilecek
+***** Counter içerisine İstatistik bilgileri getirilecek *****
 
 ***** Blog kısmı olmayacak *****
 

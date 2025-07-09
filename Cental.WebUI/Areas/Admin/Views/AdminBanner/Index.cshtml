@@ -24,15 +24,15 @@
             <td>@item.Title</td>
             <td>@item.Description</td>
             <td>
-                <button onclick="delBanner(@item.BannerId)" class="btn btn-danger">Sil</button>
-                <a asp-action="UpdateBanner" asp-area="Admin" asp-route-id="@item.BannerId" class="btn btn-info">Güncelle</a>
+                <button onclick="delBanner(@item.BannerId)" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                <a asp-action="UpdateBanner" asp-area="Admin" asp-route-id="@item.BannerId" class="btn btn-info"><i class="fa fa-pen"></i></a>
             </td>
         </tr>
     }
 
 </table>
 
-<a asp-action="CreateBanner" asp-controller="AdminBanner" asp-area="Admin" class="btn btn-primary">Yeni Öne Çıkan Alan Ekle</a>
+<a asp-action="CreateBanner" asp-controller="AdminBanner" asp-area="Admin" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Öne Çıkan Alan Ekle</a>
 
 <script>
 

@@ -50,8 +50,8 @@
                 <a class="btn btn-outline-warning btn-sm" asp-action="WaitingRezervation" asp-controller="AdminBooking" asp-route-id="@item.BookingId">Beklemeye Al</a>
             </td>
             <td>
-                <button onclick="delBooking(@item.BookingId)" class="btn btn-danger btn-sm">Sil</button>
-                <a asp-action="UpdateRezervation" asp-route-id="@item.BookingId" class="btn btn-info btn-sm">Güncelle</a>
+                <button onclick="delBooking(@item.BookingId)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                <a asp-action="UpdateRezervation" asp-route-id="@item.BookingId" class="btn btn-info btn-sm"><i class="fa fa-pen"></i></a>
             </td>
         </tr>
     }
@@ -61,7 +61,7 @@
     <pager asp-action="Index" asp-controller="AdminBooking" asp-area="Admin" list="@Model"></pager>
 </div>
 
-<a asp-action="CreateRezervation" asp-controller="AdminBooking" class="btn btn-primary">Yeni Rezervasyon Ekle</a>
+<a asp-action="CreateRezervation" asp-controller="AdminBooking" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Rezervasyon Ekle </a>
 
 <script>
 

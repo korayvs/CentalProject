@@ -6,11 +6,10 @@
 
 <table class="table table-bordered">
     <tr>
-        <th>#</th>
+        <th style="width:1%">#</th>
         <th>Vizyon</th>
         <th>Misyon</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
+        <th style ="width:5%">İşlemler</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -18,13 +17,15 @@
             <td>@item.AboutId</td>
             <td>@item.Vision</td>
             <td>@item.Mission</td>
-            <td><button onclick="delAbout(@item.AboutId)" class="btn btn-danger">Sil</button></td>
-            <td><a asp-action="UpdateAbout" asp-area="Admin" asp-route-id="@item.AboutId" class="btn btn-info">Güncelle</a> </td>
+            <td>
+                <button onclick="delAbout(@item.AboutId)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                <a asp-action="UpdateAbout" asp-area="Admin" asp-route-id="@item.AboutId" class="btn btn-info btn-sm"><i class="fa fa-pen"></i></a>
+            </td>
         </tr>
     }
 </table>
 
-<a asp-action="CreateAbout" asp-controller="AdminAbout" asp-area="Admin" class="btn btn-primary">Yeni Hakkımızda Ekle</a>
+<a asp-action="CreateAbout" asp-controller="AdminAbout" asp-area="Admin" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Hakkımızda Ekle </a>
 
 <script>
 

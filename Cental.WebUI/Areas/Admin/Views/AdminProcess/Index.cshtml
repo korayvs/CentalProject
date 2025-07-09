@@ -11,7 +11,7 @@
         <th style="width:1%">#</th>
         <th>Başlık</th>
         <th>Açıklama</th>
-        <th style="width:8%">İşlemler</th>
+        <th style="width:5%">İşlemler</th>
     </tr>
 
     @foreach (var item in Model)
@@ -22,15 +22,15 @@
             <td>@item.Title</td>
             <td>@item.Description</td>
             <td>
-                <button onclick="delProcess(@item.ProcessId)" class="btn btn-danger btn-sm">Sil</button>
-                <a asp-action="UpdateProcess" asp-route-id="@item.ProcessId" class="btn btn-info btn-sm">Güncelle</a>
+                <button onclick="delProcess(@item.ProcessId)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                <a asp-action="UpdateProcess" asp-route-id="@item.ProcessId" class="btn btn-info btn-sm"><i class="fa fa-pen"></i></a>
             </td>
         </tr>
     }
 
 </table>
 
-<a asp-action="CreateProcess" asp-controller="AdminProcess" asp-area="Admin" class="btn btn-primary">Yeni Süreç Ekle</a>
+<a asp-action="CreateProcess" asp-controller="AdminProcess" asp-area="Admin" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Süreç Ekle </a>
 
 <script>
 

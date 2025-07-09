@@ -25,14 +25,14 @@
             <td>@item.Title</td>
             <td>@item.Description</td>
             <td>
-                <button onclick="delService(@item.ServiceId)" class="btn btn-danger btn-sm">Sil</button>
-                <a asp-action="UpdateService" asp-route-id="@item.ServiceId" class="btn btn-info btn-sm">Güncelle</a>
+                <button onclick="delService(@item.ServiceId)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                <a asp-action="UpdateService" asp-route-id="@item.ServiceId" class="btn btn-info btn-sm"><i class="fa fa-pen"></i></a>
             </td>
         </tr>
     }
 </table>
 
-<a asp-action="CreateService" asp-controller="AdminService" asp-area="Admin" class="btn btn-primary"> Yeni Hizmet Ekle </a>
+<a asp-action="CreateService" asp-controller="AdminService" asp-area="Admin" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Hizmet Ekle </a>
 
 <script>
 

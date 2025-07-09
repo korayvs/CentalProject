@@ -1,8 +1,8 @@
-﻿@model List<ResultBookingDto>
+﻿@model PagedList<ResultBookingDto>
 @{
     ViewData["Title"] = "Rezervasyonlar";
     Layout = "~/Areas/Manager/Views/ManagerLayout/Index.cshtml";
-    int count = 0;
+    int count = (Model.PageNumber - 1) * Model.PageSize;
 }
 
 <table class="table table-bordered">
@@ -48,19 +48,6 @@
                 <a class="btn btn-outline-warning btn-sm" asp-action="WaitingRezervation" asp-controller="Booking" asp-route-id="@item.BookingId">Beklemeye Al</a>
             </td>
 
-            @* <td>
-                @{
-                    if (item.IsApproved == true)
-                    {
-                        <a class="btn btn-danger" asp-action="DeclineRezervation" asp-controller="Booking" asp-route-id="@item.BookingId">Reddet</a>
-                    }
-                    else
-                    {
-                        <a class="btn btn-success" asp-action="ApproveRezervation" asp-controller="Booking" asp-route-id="@item.BookingId">Onayla</a>
-                    }
-                }
-            </td> *@
-
             <td>
                 <button onclick="delBooking(@item.BookingId)" class="btn btn-danger btn-sm">Sil</button>
                 <a asp-action="UpdateRezervation" asp-route-id="@item.BookingId" class="btn btn-info btn-sm">Güncelle</a>
@@ -68,6 +55,10 @@
         </tr>
     }
 </table>
+
+<div class="text-center">
+    <pager asp-action="Index" asp-controller="Booking" asp-area="Manager" list="@Model"></pager>
+</div>
 
 <a asp-action="CreateRezervation" asp-controller="Booking" class="btn btn-primary">Yeni Rezervasyon Ekle</a>
 

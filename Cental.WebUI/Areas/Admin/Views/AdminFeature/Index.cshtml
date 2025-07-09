@@ -11,7 +11,7 @@
         <th style="width:3%">Simge</th>
         <th>Başlık</th>
         <th>Açıklama</th>
-        <th style="width:8%">İşlemler</th>
+        <th style="width:5%">İşlemler</th>
     </tr>
 
     @foreach (var item in Model)
@@ -23,14 +23,14 @@
             <td>@item.Title</td>
             <td>@(item.Description.Length > 30 ? item.Description.Substring(0, 30) + "..." : item.Description) </td>
             <td>
-                <button onclick="delFeature(@item.FeatureId)" class="btn btn-danger btn-sm">Sil</button>
-                <a asp-action="UpdateFeature" asp-route-id="@item.FeatureId" class="btn btn-info btn-sm">Güncelle</a>
+                <button onclick="delFeature(@item.FeatureId)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                <a asp-action="UpdateFeature" asp-route-id="@item.FeatureId" class="btn btn-info btn-sm"><i class="fa fa-pen"></i></a>
             </td>
         </tr>
     }
 </table>
 
-<a asp-action="CreateFeature" asp-controller="AdminFeature" asp-area="Admin" class="btn btn-primary"> Yeni Özellik Ekle </a>
+<a asp-action="CreateFeature" asp-controller="AdminFeature" asp-area="Admin" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Özellik Ekle </a>
 
 <script>
 
