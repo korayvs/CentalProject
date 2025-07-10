@@ -1,11 +1,14 @@
 ﻿using AutoMapper;
 using Cental.BusinessLayer.Abstract;
+using Cental.DtoLayer.BrandDtos;
 using Cental.DtoLayer.ReviewDtos;
 using Cental.EntityLayer.Entities;
+using Humanizer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using PagedList.Core;
 
 namespace Cental.WebUI.Areas.Admin.Controllers
 {
@@ -13,11 +16,13 @@ namespace Cental.WebUI.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class AdminReviewController(IReviewService _reviewService, ICarService _carService, IMapper _mapper, UserManager<AppUser> _userManager) : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(int page = 1, int pageSize = 5)
         {
-            var values = _reviewService.TGetAll();
-            var dtos = _mapper.Map<List<ResultReviewDto>>(values);
-            return View(dtos);
+            var value = _reviewService.TGetAll();
+            var dtos = _mapper.Map<List<ResultReviewDto>>(value);
+            var reviews = dtos.AsQueryable();
+            var values = new PagedList<ResultReviewDto>(reviews, page, pageSize);
+            return View(values);
         }
 
         private void SelectUserList()

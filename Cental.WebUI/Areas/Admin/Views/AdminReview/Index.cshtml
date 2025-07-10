@@ -1,8 +1,8 @@
-﻿@model List<ResultReviewDto>
+﻿@model PagedList<ResultReviewDto>
 @{
     ViewData["Title"] = "Araç Değerlendirmeleri";
     Layout = "~/Areas/Admin/Views/AdminLayout/Layout.cshtml";
-    int count = 0;
+    int count = (Model.PageNumber - 1) * Model.PageSize;
 }
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
@@ -45,6 +45,10 @@
         </tr>
     }
 </table>
+
+<div class="text-center">
+    <pager asp-action="Index" asp-controller="AdminReview" asp-area="Admin" list="@Model"></pager>
+</div>
 
 <a asp-action="CreateReview" asp-controller="AdminReview" asp-area="Admin" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Araç Değerlendir </a>
 
