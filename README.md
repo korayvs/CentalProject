@@ -20,40 +20,40 @@ Identity kütüphanesi ile kullanıcı doğrulama ve yetkilendirme işlemleri g�
 ### 🧑‍💼 **Admin Paneli**
 -Rol Yönetimi: Kullanıcılara özel yetkilendirme ve rol atama.
 
--Rezervasyon Kontrolü: Rezervasyonları onaylama, askıya alma veya iptal etme.
+- Rezervasyon Kontrolü: Rezervasyonları onaylama, askıya alma veya iptal etme.
 
--Mesajlar: Kullanıcılardan gelen mesajların takibi ve yönetimi.
+- Mesajlar: Kullanıcılardan gelen mesajların takibi ve yönetimi.
 
--Değerlendirmeler: Araçlara ait kullanıcı puan ve yorumlarını inceleme.
+- Değerlendirmeler: Araçlara ait kullanıcı puan ve yorumlarını inceleme.
 
--Araç ve Marka Yönetimi: Sistem üzerindeki araç ve markaların kontrolü.
+- Araç ve Marka Yönetimi: Sistem üzerindeki araç ve markaların kontrolü.
 
--İçerik Düzenleme: Hakkımızda, hizmetler ve öne çıkan alanlar gibi bölümlerin yönetimi.
+- İçerik Düzenleme: Hakkımızda, hizmetler ve öne çıkan alanlar gibi bölümlerin yönetimi.
 
 ### 🧑‍🔧 **Manager Paneli**
--Profil Yönetimi: Kendi kullanıcı bilgilerini güncelleme.
+- Profil Yönetimi: Kendi kullanıcı bilgilerini güncelleme.
 
--Sosyal Medya Ayarları: Sosyal medya hesaplarını ekleme, düzenleme veya silme.
+- Sosyal Medya Ayarları: Sosyal medya hesaplarını ekleme, düzenleme veya silme.
 
--Rezervasyon Takibi: Rezervasyon başvurularını görüntüleme ve yanıt verme.
+- Rezervasyon Takibi: Rezervasyon başvurularını görüntüleme ve yanıt verme.
 
 ### 👥 **User Paneli**
--Kullanıcı Profili: Hesap bilgilerini görüntüleme ve düzenleme.
+- Kullanıcı Profili: Hesap bilgilerini görüntüleme ve düzenleme.
 
--Rezervasyon Geçmişi: Önceki rezervasyonları görme ve takip etme.
+- Rezervasyon Geçmişi: Önceki rezervasyonları görme ve takip etme.
 
--Araç Değerlendirmesi: Kiralanan araçlara puan ve yorum ekleme.
+- Araç Değerlendirmesi: Kiralanan araçlara puan ve yorum ekleme.
 
 ## 📦 **Kullanılan Araçlar ve Kütüphaneler**
--Microsoft.AspNetCore.Identity
+- Microsoft.AspNetCore.Identity
 
--AutoMapper
+- AutoMapper
 
--FluentValidation
+- FluentValidation
 
--SweetAlert
+- SweetAlert
 
--PagedList
+- PagedList
 
 Ek olarak, Areas, ViewComponents yapıları ve Lazy Loading teknikleri sayesinde sistemin performansı artırılmıştır.
 
