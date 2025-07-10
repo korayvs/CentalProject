@@ -15,10 +15,10 @@ Kullanıcılar araçlar hakkında yorum yapabilir, puan verebilir ve deneyimleri
 Proje, ASP.NET Core MVC mimarisi ile .NET Core üzerinde, N Katmanlı Mimari prensiplerine göre inşa edilmiştir. Entity Framework Core kullanılarak Code-First Migration yöntemiyle veritabanı oluşturulmuş ve geliştirilmiştir. 
 Identity kütüphanesi ile kullanıcı doğrulama ve yetkilendirme işlemleri güvenli bir şekilde sağlanmıştır.
 
-## **Paneller ve Yetkiler**
+## 📜 **Paneller ve Yetkiler**
 
-### 🧑‍💼 **Admin Paneli**
--Rol Yönetimi: Kullanıcılara özel yetkilendirme ve rol atama.
+### 🔑 **Admin Paneli**
+- Rol Yönetimi: Kullanıcılara özel yetkilendirme ve rol atama.
 
 - Rezervasyon Kontrolü: Rezervasyonları onaylama, askıya alma veya iptal etme.
 
@@ -30,7 +30,7 @@ Identity kütüphanesi ile kullanıcı doğrulama ve yetkilendirme işlemleri g�
 
 - İçerik Düzenleme: Hakkımızda, hizmetler ve öne çıkan alanlar gibi bölümlerin yönetimi.
 
-### 🧑‍🔧 **Manager Paneli**
+### 🧑‍💼 **Manager Paneli**
 - Profil Yönetimi: Kendi kullanıcı bilgilerini güncelleme.
 
 - Sosyal Medya Ayarları: Sosyal medya hesaplarını ekleme, düzenleme veya silme.
@@ -55,6 +55,15 @@ Identity kütüphanesi ile kullanıcı doğrulama ve yetkilendirme işlemleri g�
 
 - PagedList
 
+
 Ek olarak, Areas, ViewComponents yapıları ve Lazy Loading teknikleri sayesinde sistemin performansı artırılmıştır.
 
+
+### 🏠 **Kullanıcı Arayüzü (UI)**
+
+### 🔑 **Admin Paneli**
+
+### 🧑‍💼 **Manager Paneli**
+
+### 👥 **User Paneli**
 
