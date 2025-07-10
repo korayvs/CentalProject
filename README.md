@@ -1,17 +1,17 @@
-#🚘 **Cental Car Project**
+# 🚘 **Cental Car Project**
 Cental Araç Kiralama, kullanıcıların çeşitli araç modellerini detaylı şekilde inceleyip karşılaştırabildikleri, hızlı ve kolay bir şekilde rezervasyon yapabildikleri kapsamlı bir web platformudur. 
 Kullanıcılar araçlar hakkında yorum yapabilir, puan verebilir ve deneyimlerini diğer kullanıcılarla paylaşabilirler. Ayrıca doğrudan mesaj yoluyla sistemle ilgili sorularını ileterek destek alabilirler.
 
-##🌟 **Genel Özellikler**
--🚗 Araç İnceleme & Karşılaştırma: Farklı araç modellerini detaylı olarak görüntüleyip kıyaslayabilirsiniz.
+## 🌟 **Genel Özellikler**
+- 🚗 Araç İnceleme & Karşılaştırma: Farklı araç modellerini detaylı olarak görüntüleyip kıyaslayabilirsiniz.
 
--📝 Yorumlar & Puanlama: Kullanıcılar araç deneyimlerini yorumlarla aktarabilir, puan verebilir.
+- 📝 Yorumlar & Puanlama: Kullanıcılar araç deneyimlerini yorumlarla aktarabilir, puan verebilir.
 
--📩 Mesajlaşma & Destek: Site üzerinden hızlı mesajlaşma yoluyla destek hizmeti alınabilir.
+- 📩 Mesajlaşma & Destek: Site üzerinden hızlı mesajlaşma yoluyla destek hizmeti alınabilir.
 
--👤 Profil Yönetimi: Kayıtlı kullanıcılar kendi bilgilerini yönetebilir, rezervasyon geçmişini takip edebilir.
+- 👤 Profil Yönetimi: Kayıtlı kullanıcılar kendi bilgilerini yönetebilir, rezervasyon geçmişini takip edebilir.
 
-##🛠️ **Mimari ve Teknoloji**
+## 🛠️ **Mimari ve Teknoloji**
 Proje, ASP.NET Core MVC mimarisi ile .NET Core üzerinde, N Katmanlı Mimari prensiplerine göre inşa edilmiştir. Entity Framework Core kullanılarak Code-First Migration yöntemiyle veritabanı oluşturulmuş ve geliştirilmiştir. 
 Identity kütüphanesi ile kullanıcı doğrulama ve yetkilendirme işlemleri güvenli bir şekilde sağlanmıştır.
 
@@ -30,21 +30,21 @@ Identity kütüphanesi ile kullanıcı doğrulama ve yetkilendirme işlemleri g�
 
 -İçerik Düzenleme: Hakkımızda, hizmetler ve öne çıkan alanlar gibi bölümlerin yönetimi.
 
-###🧑‍🔧 **Manager Paneli**
+### 🧑‍🔧 **Manager Paneli**
 -Profil Yönetimi: Kendi kullanıcı bilgilerini güncelleme.
 
 -Sosyal Medya Ayarları: Sosyal medya hesaplarını ekleme, düzenleme veya silme.
 
 -Rezervasyon Takibi: Rezervasyon başvurularını görüntüleme ve yanıt verme.
 
-###👥 **User Paneli**
+### 👥 **User Paneli**
 -Kullanıcı Profili: Hesap bilgilerini görüntüleme ve düzenleme.
 
 -Rezervasyon Geçmişi: Önceki rezervasyonları görme ve takip etme.
 
 -Araç Değerlendirmesi: Kiralanan araçlara puan ve yorum ekleme.
 
-##📦 **Kullanılan Araçlar ve Kütüphaneler**
+## 📦 **Kullanılan Araçlar ve Kütüphaneler**
 -Microsoft.AspNetCore.Identity
 
 -AutoMapper
