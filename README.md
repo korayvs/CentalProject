@@ -1,5 +1,5 @@
 # 🚘 **Cental Car Project**
-Cental Araç Kiralama, kullanıcıların çeşitli araç modellerini detaylı şekilde inceleyip karşılaştırabildikleri, hızlı ve kolay bir şekilde rezervasyon yapabildikleri kapsamlı bir web platformudur. 
+Cental Araç Projesi, kullanıcıların çeşitli araç modellerini detaylı şekilde inceleyip karşılaştırabildikleri, hızlı ve kolay bir şekilde rezervasyon yapabildikleri kapsamlı bir web platformudur. 
 Kullanıcılar araçlar hakkında yorum yapabilir, puan verebilir ve deneyimlerini diğer kullanıcılarla paylaşabilirler. Ayrıca doğrudan mesaj yoluyla sistemle ilgili sorularını ileterek destek alabilirler.
 
 ## 🌟 **Genel Özellikler**
