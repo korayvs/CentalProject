@@ -1,4 +1,4 @@
-﻿
+﻿@model ContactInfo
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/UILayout/Index.cshtml";
@@ -20,8 +20,8 @@
                                 <i class="fas fa-map-marker-alt fa-2x"></i>
                             </div>
                             <div>
-                                <h4>Address</h4>
-                                <p class="mb-0">123 Street New York.USA</p>
+                                <h4>Adresimiz</h4>
+                                <p class="mb-0">@Model.Location</p>
                             </div>
                         </div>
                     </div>
@@ -31,8 +31,8 @@
                                 <i class="fas fa-envelope fa-2x"></i>
                             </div>
                             <div>
-                                <h4>Mail Us</h4>
-                                <p class="mb-0">info@example.com</p>
+                                <h4>E posta</h4>
+                                <p class="mb-0">@Model.Email</p>
                             </div>
                         </div>
                     </div>
@@ -42,8 +42,8 @@
                                 <i class="fa fa-phone-alt fa-2x"></i>
                             </div>
                             <div>
-                                <h4>Telephone</h4>
-                                <p class="mb-0">(+012) 3456 7890</p>
+                                <h4>Telefon</h4>
+                                <p class="mb-0">@Model.PhoneNumber1</p>
                             </div>
                         </div>
                     </div>
@@ -53,8 +53,9 @@
                                 <i class="fab fa-firefox-browser fa-2x"></i>
                             </div>
                             <div>
-                                <h4>Yoursite@ex.com</h4>
-                                <p class="mb-0">(+012) 3456 7890</p>
+                                <h4>Sosyal Medyalarımız</h4>
+                                <p class="mb-0">@Model.SocialMedia3</p>
+                                <p class="mb-0">@Model.SocialMedia4</p>
                             </div>
                         </div>
                     </div>
@@ -63,39 +64,39 @@
             @await Component.InvokeAsync("_ContactSendMessage")
             <div class="col-12 col-xl-1 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="d-flex flex-xl-column align-items-center justify-content-center">
-                    <a class="btn btn-xl-square btn-light rounded-circle mb-0 mb-xl-4 me-4 me-xl-0" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-xl-square btn-light rounded-circle mb-0 mb-xl-4 me-4 me-xl-0" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-xl-square btn-light rounded-circle mb-0 mb-xl-4 me-4 me-xl-0" href=""><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-xl-square btn-light rounded-circle mb-0 mb-xl-0 me-0 me-xl-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-xl-square btn-light rounded-circle mb-0 mb-xl-4 me-4 me-xl-0" href="@Model.SocialMedia1"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-xl-square btn-light rounded-circle mb-0 mb-xl-4 me-4 me-xl-0" href="@Model.SocialMedia2"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-xl-square btn-light rounded-circle mb-0 mb-xl-4 me-4 me-xl-0" href="@Model.SocialMedia3"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-xl-square btn-light rounded-circle mb-0 mb-xl-0 me-0 me-xl-0" href="@Model.SocialMedia4"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="col-12 col-xl-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="p-5 bg-light rounded">
                     <div class="bg-white rounded p-4 mb-4">
-                        <h4 class="mb-3">Our Branch 01</h4>
+                        <h4 class="mb-3">İstanbul Şubemiz</h4>
                         <div class="d-flex align-items-center flex-shrink-0 mb-3">
-                            <p class="mb-0 text-dark me-2">Address:</p><i class="fas fa-map-marker-alt text-primary me-2"></i><p class="mb-0">123 Street New York.USA</p>
+                            <p class="mb-0 text-dark me-2">Adres:</p><i class="fas fa-map-marker-alt text-primary me-2"></i><p class="mb-0">Maltepe, İstanbul</p>
                         </div>
                         <div class="d-flex align-items-center">
-                            <p class="mb-0 text-dark me-2">Telephone:</p><i class="fa fa-phone-alt text-primary me-2"></i><p class="mb-0">(+012) 3456 7890</p>
+                            <p class="mb-0 text-dark me-2">Telefon:</p><i class="fa fa-phone-alt text-primary me-2"></i><p class="mb-0">@Model.PhoneNumber1</p>
                         </div>
                     </div>
                     <div class="bg-white rounded p-4 mb-4">
-                        <h4 class="mb-3">Our Branch 02</h4>
+                        <h4 class="mb-3">İzmir Şubemiz</h4>
                         <div class="d-flex align-items-center mb-3">
-                            <p class="mb-0 text-dark me-2">Address:</p><i class="fas fa-map-marker-alt text-primary me-2"></i><p class="mb-0">123 Street New York.USA</p>
+                            <p class="mb-0 text-dark me-2">Adres:</p><i class="fas fa-map-marker-alt text-primary me-2"></i><p class="mb-0">Karşıyaka, İzmir</p>
                         </div>
                         <div class="d-flex align-items-center">
-                            <p class="mb-0 text-dark me-2">Telephone:</p><i class="fa fa-phone-alt text-primary me-2"></i><p class="mb-0">(+012) 3456 7890</p>
+                            <p class="mb-0 text-dark me-2">Telefon:</p><i class="fa fa-phone-alt text-primary me-2"></i><p class="mb-0">@Model.PhoneNumber2</p>
                         </div>
                     </div>
                     <div class="bg-white rounded p-4 mb-0">
-                        <h4 class="mb-3">Our Branch 03</h4>
+                        <h4 class="mb-3">Ankara Şubemiz</h4>
                         <div class="d-flex align-items-center mb-3">
-                            <p class="mb-0 text-dark me-2">Address:</p><i class="fas fa-map-marker-alt text-primary me-2"></i><p class="mb-0">123 Street New York.USA</p>
+                            <p class="mb-0 text-dark me-2">Adres:</p><i class="fas fa-map-marker-alt text-primary me-2"></i><p class="mb-0">Çankaya, Ankara</p>
                         </div>
                         <div class="d-flex align-items-center">
-                            <p class="mb-0 text-dark me-2">Telephone:</p><i class="fa fa-phone-alt text-primary me-2"></i><p class="mb-0">(+012) 3456 7890</p>
+                            <p class="mb-0 text-dark me-2">Telefon:</p><i class="fa fa-phone-alt text-primary me-2"></i><p class="mb-0">+90 123 345 6789</p>
                         </div>
                     </div>
                 </div>
@@ -103,7 +104,7 @@
             <div class="col-12">
                 <div class="rounded">
                     <iframe class="rounded w-100"
-                            style="height: 400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd"
+                            style="height: 400px;" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d188.3402724889587!2d29.119142063866917!3d40.94984337645245!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1752175587320!5m2!1str!2str"
                             loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>

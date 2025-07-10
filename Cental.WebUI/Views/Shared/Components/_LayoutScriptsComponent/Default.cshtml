@@ -1,0 +1,32 @@
+﻿
+@*
+    _LayoutScriptsComponent
+*@
+
+<!-- JavaScript Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/Cental-1.0.0/lib/wow/wow.min.js"></script>
+<script src="~/Cental-1.0.0/lib/easing/easing.min.js"></script>
+<script src="~/Cental-1.0.0/lib/waypoints/waypoints.min.js"></script>
+<script src="~/Cental-1.0.0/lib/counterup/counterup.min.js"></script>
+<script src="~/Cental-1.0.0/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<!-- Template Javascript -->
+<script src="~/Cental-1.0.0/js/main.js"></script>
+<script>
+    // Kullanıcı giriş yapmışsa
+    var isLoggedIn = true; // Bu değeri oturum durumuna göre dinamik olarak ayarlayın
+
+    if (isLoggedIn) {
+        document.getElementById('btn-uye-ol').style.display = 'none'; // Üye Ol butonunu gizle
+        document.getElementById('btn-giris-yap').textContent = 'Çıkış Yap'; // Giriş Yap butonunu Çıkış Yap olarak değiştir
+        document.getElementById('btn-giris-yap').setAttribute('href', '/Login/Logout'); // Çıkış yapacak linki ayarla
+    } else {
+        document.getElementById('btn-uye-ol').style.display = 'inline-block'; // Üye Ol butonunu göster
+        document.getElementById('btn-giris-yap').textContent = 'Giriş Yap'; // Giriş Yap butonunu Giriş Yap olarak değiştir
+        document.getElementById('btn-giris-yap').setAttribute('href', '/Login/Index'); // Giriş yapacak linki ayarla
+    }
+</script>

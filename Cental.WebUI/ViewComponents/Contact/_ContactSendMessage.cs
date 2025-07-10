@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Cental.DtoLayer.MessageDtos;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Cental.WebUI.ViewComponents.Contact
 {
     public class _ContactSendMessage : ViewComponent
     {
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(CreateMessageDto model)
         {
-            return View();
+            return View(model);
         }
     }
 }

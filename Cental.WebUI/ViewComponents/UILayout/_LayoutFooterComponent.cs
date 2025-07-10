@@ -8,7 +8,7 @@ namespace Cental.WebUI.ViewComponents.UILayout
         public IViewComponentResult Invoke()
         {
             var contact = _contactInfoService.TGetAll().TakeLast(1).FirstOrDefault();
-            return View();
+            return View(contact);
         }
     }
 }

@@ -11,11 +11,11 @@
         <th>Konum</th>
         <th>E posta</th>
         <th>Telefon Numarası - 1</th>        
-        <th>Telefon Numarası - 2</th>        
+        @* <th>Telefon Numarası - 2</th>        
         <th>Sosyal Medya - 1</th>        
-        <th>Sosyal Medya - 2</th>        
+        <th>Sosyal Medya - 2</th> *@        
         <th>Sosyal Medya - 3</th>        
-        <th>Sosyal Medya - 4</th>       
+        @* <th>Sosyal Medya - 4</th>  *@      
         <th>Açılış Saati</th>       
         <th>Kapanış Saati</th>       
         <th style="width:5%">İşlemler</th>
@@ -29,11 +29,11 @@
             <td>@item.Location</td>
             <td>@item.Email</td>
             <td>@item.PhoneNumber1</td>            
-            <td>@item.PhoneNumber2</td>            
+            @* <td>@item.PhoneNumber2</td>            
             <td>@item.SocialMedia1</td>            
-            <td>@item.SocialMedia2</td>            
+            <td>@item.SocialMedia2</td> *@            
             <td>@item.SocialMedia3</td>            
-            <td>@item.SocialMedia4</td>            
+            @* <td>@item.SocialMedia4</td> *@            
             <td>@item.OpeningHours</td>            
             <td>@item.ClosingHours</td>            
             <td>
@@ -44,7 +44,7 @@
     }
 </table>
 
-<a asp-action="CreateContactInfo" asp-controller="AdminContactInfo" asp-area="Admin" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Bilgi Ekle </a>
+@* <a asp-action="CreateContactInfo" asp-controller="AdminContactInfo" asp-area="Admin" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Yeni Bilgi Ekle </a> *@
 
 <script>
 

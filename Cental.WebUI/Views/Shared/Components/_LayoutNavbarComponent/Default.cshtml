@@ -21,8 +21,27 @@
                     <a href="/Service/Index" class="nav-item nav-link">Hizmetler</a>
                     <a href="/Contact/Index" class="nav-item nav-link">İletişim</a>
                 </div>
-                <a href="/Register/Signup" class="btn btn-primary rounded-pill py-2 px-4">Üye Ol</a>
-                <a href="/Login/Index" style="margin-left:5px" class="btn btn-primary rounded-pill py-2 px-4">Giriş Yap</a>
+                @* <a href="/Register/Signup" class="btn btn-primary rounded-pill py-2 px-4">Üye Ol</a> *@
+                @* <a href="/Login/Index" style="margin-left:5px" class="btn btn-primary rounded-pill py-2 px-4">Giriş Yap</a> *@
+                @{
+                    bool isLoggedIn = User.Identity.IsAuthenticated;
+                    string fullName = isLoggedIn ? User.Identity.Name : "";
+                }
+
+                @if (isLoggedIn)
+                {
+                    <div class="position-relative">
+                        <input disabled class="form-control rounded py-3 ps-4" type="text" placeholder="@fullName">
+                        <button onclick="window.location.href='/Login/Logout';" type="button" class="btn btn-secondary position-absolute top-0 end-0 py-2 mt-2 me-2">Çıkış Yap</button>
+                    </div>
+                    @* <span class="fw-bold text-primary py-2 px-2 ms-2">@fullName</span>
+                    <a href="/Login/Logout" class="btn btn-primary rounded-pill py-2 px-4 ms-2">Çıkış Yap</a> *@
+                }
+                else
+                {
+                    <a href="/Register/Signup" class="btn btn-primary rounded-pill py-2 px-4">Üye Ol</a>
+                    <a href="/Login/Index" class="btn btn-primary rounded-pill py-2 px-4 ms-2">Giriş Yap</a>
+                }
             </div>
         </nav>
     </div>
