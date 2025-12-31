@@ -67,6 +67,8 @@ Ek olarak, Areas, ViewComponents yapıları ve Lazy Loading teknikleri sayesinde
 
 <img width="1891" height="904" alt="default3" src="https://github.com/user-attachments/assets/3661ccc2-1611-4fb6-b0d6-293485029b0c" />
 
+<img width="1900" height="907" alt="default4" src="https://github.com/user-attachments/assets/66433913-200a-4c33-b751-4e1cafc3d2db" />
+
 <img width="1894" height="905" alt="default4" src="https://github.com/user-attachments/assets/384e2c08-51d8-465a-995a-049693c37378" />
 
 <img width="1881" height="901" alt="default5" src="https://github.com/user-attachments/assets/106ced60-c973-44f9-bb74-14010d0d3f69" />
@@ -76,6 +78,10 @@ Ek olarak, Areas, ViewComponents yapıları ve Lazy Loading teknikleri sayesinde
 <img width="1185" height="903" alt="default contact" src="https://github.com/user-attachments/assets/23c43876-e4ec-4cb7-bc62-de55c580e509" />
 
 ### 🔄 **Login-Register**
+
+<img width="1917" height="898" alt="login1" src="https://github.com/user-attachments/assets/d96439fe-b14c-4b39-8f3f-59ee74155e98" />
+
+<img width="1912" height="901" alt="login2" src="https://github.com/user-attachments/assets/83690349-275d-41eb-8264-059e9e784252" />
 
 <img width="1914" height="910" alt="login1" src="https://github.com/user-attachments/assets/cdcf8d26-1bd6-468b-9a4e-015f10953658" />
 
