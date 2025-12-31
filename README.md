@@ -69,8 +69,6 @@ Ek olarak, Areas, ViewComponents yapıları ve Lazy Loading teknikleri sayesinde
 
 <img width="1900" height="907" alt="default4" src="https://github.com/user-attachments/assets/66433913-200a-4c33-b751-4e1cafc3d2db" />
 
-<img width="1894" height="905" alt="default4" src="https://github.com/user-attachments/assets/384e2c08-51d8-465a-995a-049693c37378" />
-
 <img width="1881" height="901" alt="default5" src="https://github.com/user-attachments/assets/106ced60-c973-44f9-bb74-14010d0d3f69" />
 
 <img width="716" height="909" alt="default about" src="https://github.com/user-attachments/assets/08a87e5f-3bef-4692-8ce0-f3cde256fac5" />
@@ -82,10 +80,6 @@ Ek olarak, Areas, ViewComponents yapıları ve Lazy Loading teknikleri sayesinde
 <img width="1917" height="898" alt="login1" src="https://github.com/user-attachments/assets/d96439fe-b14c-4b39-8f3f-59ee74155e98" />
 
 <img width="1912" height="901" alt="login2" src="https://github.com/user-attachments/assets/83690349-275d-41eb-8264-059e9e784252" />
-
-<img width="1914" height="910" alt="login1" src="https://github.com/user-attachments/assets/cdcf8d26-1bd6-468b-9a4e-015f10953658" />
-
-<img width="1915" height="912" alt="login2" src="https://github.com/user-attachments/assets/ce11b8ae-1985-41e9-a4da-b90dabf8ca69" />
 
 ### 🔑 **Admin Paneli**
 
